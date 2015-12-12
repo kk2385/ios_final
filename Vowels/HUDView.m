@@ -17,13 +17,14 @@
     HUDView* hud = [[HUDView alloc] initWithFrame:r];
     hud.userInteractionEnabled = YES;
     
+    
     //the stopwatch
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];
     hud.stopwatch.seconds = 0;
     [hud addSubview: hud.stopwatch];
     
-    //"points" label
-    UILabel* pts = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth-310,kScreenHeight/2,140,70)];
+    //"points" label//////////////////////////////////////////////////////////////////////////////
+    UILabel* pts = [[UILabel alloc] initWithFrame:CGRectMake(2, -45,160,160)];
     pts.backgroundColor = [UIColor clearColor];
     pts.font = kFontHUD;
     pts.text = @" Points:";
@@ -37,17 +38,17 @@
     //load the button image
     UIImage* image = [UIImage imageNamed:@"btn"];
     
-    //the help button
+    //the skip button///////////////////////////////////////////////////////////////////////////////
     hud.btnHelp = [UIButton buttonWithType:UIButtonTypeCustom];
     [hud.btnHelp setTitle:@"Skip" forState:UIControlStateNormal];
     hud.btnHelp.titleLabel.font = kFontHUD;
     
     [hud.btnHelp setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnHelp.frame = CGRectMake(50, kScreenHeight/2-40, image.size.width, image.size.height);
+    hud.btnHelp.frame = CGRectMake(20, kScreenHeight/2-40, 80, 40);
     hud.btnHelp.alpha = 0.8;
     [hud addSubview: hud.btnHelp];
     
-    //the start button
+    //the start button///////////////////////////////////////////////////////////////////////////////
     hud.btnStart = [UIButton buttonWithType:UIButtonTypeCustom];
     [hud.btnStart setTitle:@"Start" forState:UIControlStateNormal];
     hud.btnStart.titleLabel.font = kFontHUD;
@@ -59,11 +60,11 @@
     
     //the revert letters button
     hud.btnReset = [UIButton buttonWithType:UIButtonTypeCustom];
-    [hud.btnReset setTitle:@"Reset" forState:UIControlStateNormal];
+    [hud.btnReset setTitle:@"Reset Word" forState:UIControlStateNormal];
     hud.btnReset.titleLabel.font = kFontHUD;
     
     [hud.btnReset setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnReset.frame = CGRectMake(70, kScreenHeight/2-80, image.size.width, image.size.height);
+    hud.btnReset.frame = CGRectMake(160, kScreenHeight/2-40, 145,40);
     hud.btnReset.alpha = 0.8;
     [hud addSubview: hud.btnReset];
     

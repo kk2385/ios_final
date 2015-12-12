@@ -49,8 +49,8 @@
 // create new tile for a given letter
 -(instancetype)initWithLetter:(NSString*)letter andSideLength:(float)sideLength
 {
-  //the tile background
-  UIImage* img = [UIImage imageNamed:@"tile.png"];
+  //BACKGROUND OF TILE////////////////////////////////
+  UIImage* img = [UIImage imageNamed:@"Icon-60.png"];
   
   //create a new object
   self = [super initWithImage:img];
@@ -66,10 +66,10 @@
     //add a letter on top
     UILabel* lblChar = [[UILabel alloc] initWithFrame:self.bounds];
     lblChar.textAlignment = NSTextAlignmentCenter;
-    lblChar.textColor = [UIColor whiteColor];
+    lblChar.textColor = [UIColor blackColor];
     lblChar.backgroundColor = [UIColor clearColor];
     lblChar.text = [letter uppercaseString];
-    lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:78.0*scale];
+    lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:50.0*scale];
     [self addSubview: lblChar];
   
     //begin in unmatched state

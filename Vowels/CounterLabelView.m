@@ -17,7 +17,7 @@
 //create an instance of the counter label
 +(instancetype)labelWithFont:(UIFont*)font frame:(CGRect)r andValue:(int)v
 {
-  CounterLabelView* label = [[CounterLabelView alloc] initWithFrame:r];
+  CounterLabelView* label = [[CounterLabelView alloc] initWithFrame:CGRectMake(86, -45, 160, 160)];
   if (label!=nil) {
     //initialization
     label.backgroundColor = [UIColor clearColor];

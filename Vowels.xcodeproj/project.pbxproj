@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AB9736A1C1C1BB100213FEB /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB973691C1C1BB100213FEB /* Icon-60.png */; };
+		8AB9736C1C1C21EB00213FEB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB9736B1C1C21EB00213FEB /* background.png */; };
 		E09595C01C1A6CB6009022EF /* StarDustView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BD1C1A6CB6009022EF /* StarDustView.m */; };
 		E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BF1C1A6CB6009022EF /* StopwatchView.m */; };
 		E09595C41C1A6CC2009022EF /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C31C1A6CC2009022EF /* TileView.m */; };
@@ -72,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8AB973691C1C1BB100213FEB /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60.png"; path = "../../../../Downloads/tile/ios/Icon-60.png"; sourceTree = "<group>"; };
+		8AB9736B1C1C21EB00213FEB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../background.png; sourceTree = "<group>"; };
 		E09595BB1C1A6C10009022EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E09595BC1C1A6CB6009022EF /* StarDustView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDustView.h; sourceTree = "<group>"; };
 		E09595BD1C1A6CB6009022EF /* StarDustView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarDustView.m; sourceTree = "<group>"; };
@@ -270,7 +274,9 @@
 				E0A429F71C1A479A00040344 /* btn@2x.png */,
 				E0A429F81C1A479A00040344 /* Default-568h@2x.png */,
 				E0A429F91C1A479A00040344 /* Default.png */,
+				8AB9736B1C1C21EB00213FEB /* background.png */,
 				E0A429FA1C1A479A00040344 /* Default@2x.png */,
+				8AB973691C1C1BB100213FEB /* Icon-60.png */,
 				E0A42A151C1A47FA00040344 /* board.jpg */,
 				E0A42A161C1A47FA00040344 /* board@2x.jpg */,
 				E0A429FC1C1A479A00040344 /* slot.png */,
@@ -457,9 +463,11 @@
 			files = (
 				E0A42A111C1A479A00040344 /* level2.plist in Resources */,
 				E0A42A091C1A479A00040344 /* Default@2x.png in Resources */,
+				8AB9736A1C1C1BB100213FEB /* Icon-60.png in Resources */,
 				E0A42A0B1C1A479A00040344 /* slot.png in Resources */,
 				E0A429C11C1A453A00040344 /* LaunchScreen.storyboard in Resources */,
 				E0A429BE1C1A453A00040344 /* Assets.xcassets in Resources */,
+				8AB9736C1C1C21EB00213FEB /* background.png in Resources */,
 				E0A42A051C1A479A00040344 /* btn.png in Resources */,
 				E0A42A201C1A484500040344 /* ding.mp3 in Resources */,
 				E0A42A0D1C1A479A00040344 /* tile.png in Resources */,
