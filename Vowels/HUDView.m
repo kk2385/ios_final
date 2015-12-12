@@ -29,10 +29,17 @@
     pts.text = @" Points:";
     [hud addSubview:pts];
     
+    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth-310,kScreenHeight/2,140,70)];
+    hud.gameOverLabel.backgroundColor = [UIColor clearColor];
+    hud.gameOverLabel.font = kFontHUD;
+    hud.gameOverLabel.text = @"Game Over!";
+    [hud addSubview:hud.gameOverLabel];
+    
     //the dynamic points label
     hud.gamePoints = [CounterLabelView labelWithFont:kFontHUD frame:CGRectMake(kScreenWidth-170,kScreenHeight/2,200,70) andValue:0];
     hud.gamePoints.textColor = [UIColor colorWithRed:0.38 green:0.098 blue:0.035 alpha:1] /*#611909*/;
     [hud addSubview: hud.gamePoints];
+    
     
     //load the button image
     UIImage* image = [UIImage imageNamed:@"btn"];
@@ -71,43 +78,110 @@
 }
 
 
--(void) inGameMode {
-    [self.btnStart setHidden: YES];
+-(void) makeAllHudElementsVisible {
+    [self.btnStart setHidden: NO];
     [self.btnHelp setHidden: NO];
     [self.btnReset setHidden: NO];
     [self.stopwatch setHidden: NO];
     [self.gamePoints setHidden: NO];
-    for (UIView *subview in self.subviews) {
+    for (UIView *subview in self.subviews) { //selects all UILabels (gameover, points: highscore)
         if ([subview isKindOfClass:[UILabel class]]) {
             [subview setHidden: NO];
         }
     }
+    
+    self.btnStart.alpha = 1;
+    self.btnHelp.alpha = 1;
+    self.btnReset.alpha = 1;
+    self.stopwatch.alpha = 1;
+    self.gamePoints.alpha = 1;
+    for (UIView *subview in self.subviews) {
+        if ([subview isKindOfClass:[UILabel class]]) {
+            subview.alpha = 1;
+        }
+    }
+}
+
+-(void) makeAllHudElementsInvisible {
+    
+    self.btnStart.alpha = 0;
+    self.btnHelp.alpha = 0;
+    self.btnReset.alpha = 0;
+    self.stopwatch.alpha = 0;
+    self.gamePoints.alpha = 0;
+    for (UIView *subview in self.subviews) {
+        if ([subview isKindOfClass:[UILabel class]]) {
+            subview.alpha = 0;
+        }
+    }
+}
+
+-(void) inGameMode {
+    [self makeAllHudElementsVisible];
+    [self makeAllHudElementsInvisible];
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.btnStart.alpha = 0;
+                         self.btnHelp.alpha = 1;
+                         self.btnReset.alpha = 1;
+                         self.stopwatch.alpha = 1;
+                         self.gamePoints.alpha = 1;
+                         for (UIView *subview in self.subviews) {
+                             if ([subview isKindOfClass:[UILabel class]]) {
+                                 subview.alpha = 1;
+                             }
+                         }
+                     } completion:^(BOOL finished) {
+                         
+                     }];
+    
 }
 
 -(void) inMenuMode {
-    [self.btnStart setHidden: NO];
-    [self.btnHelp setHidden: YES];
-    [self.btnReset setHidden: YES];
-    [self.stopwatch setHidden: YES];
-    [self.gamePoints setHidden: YES];
-    for (UIView *subview in self.subviews) {
-        if ([subview isKindOfClass:[UILabel class]]) {
-            [subview setHidden: YES];
-        }
-    }
+    [self makeAllHudElementsVisible];
+    [self makeAllHudElementsInvisible];
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.btnStart.alpha = 1;
+                         self.btnHelp.alpha = 0;
+                         self.btnReset.alpha = 0;
+                         self.stopwatch.alpha = 0;
+                         self.gamePoints.alpha = 0;
+                         for (UIView *subview in self.subviews) {
+                             if ([subview isKindOfClass:[UILabel class]]) {
+                                 subview.alpha = 0;
+                             }
+                         }
+                     } completion:^(BOOL finished) {
+                         
+                     }];
+
 }
 
 -(void) inEndGameMode {
-    [self.btnStart setHidden: NO];
-    [self.btnHelp setHidden: YES];
-    [self.btnReset setHidden: YES];
-    [self.stopwatch setHidden: YES];
-    [self.gamePoints setHidden: YES];
-    for (UIView *subview in self.subviews) {
-        if ([subview isKindOfClass:[UILabel class]]) {
-            [subview setHidden: YES];
-        }
-    }
+    [self makeAllHudElementsVisible];
+    [self makeAllHudElementsInvisible];
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.btnStart.alpha = 1;
+                         self.btnHelp.alpha = 0;
+                         self.btnReset.alpha = 0;
+                         self.stopwatch.alpha = 0;
+                         self.gamePoints.alpha = 0;
+                         for (UIView *subview in self.subviews) {
+                             if ([subview isKindOfClass:[UILabel class]]) {
+                                 subview.alpha = 0;
+                             }
+                         }
+                     } completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 -(id)hitTest:(CGPoint)point withEvent:(UIEvent *)event

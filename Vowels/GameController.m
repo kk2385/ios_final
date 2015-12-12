@@ -73,6 +73,16 @@
         target.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/4);
         
         [self.gameView addSubview:target];
+        target.alpha = 0;
+        [UIView animateWithDuration:0.5
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             target.alpha = 1;
+                         } completion:^(BOOL finished) {
+                             // adjust view on spot
+                             //                         [self placeTile:tile
+                         }];
         [_targets addObject: target];
     }
     
@@ -93,6 +103,16 @@
         TargetView* bottom = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
         bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/4*3);
         [self.gameView addSubview:bottom];
+        bottom.alpha = 0;
+        [UIView animateWithDuration:0.5
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             bottom.alpha = 1;
+                         } completion:^(BOOL finished) {
+                             // adjust view on spot
+                             //                         [self placeTile:tile
+                         }];
         [_tilesBottom addObject: bottom];
     }
     [self generateLetterTile:@"a"];
@@ -333,11 +353,26 @@
 
 -(void) actionStart
 {
-    [_hud inGameMode];
-    [self revertAllTiles];
-    [self clearBoard];
-    [self startStopwatch];
-    [self dealRandomAnagram];
+    
+    self.data.points = 0;
+    [self.hud.gamePoints countTo:self.data.points withDuration:0.1];
+    [UIView animateWithDuration:0.3
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.hud.btnStart.alpha = 0;
+                     } completion:^(BOOL finished) {
+                         // adjust view on spot
+                         //                         [self placeTile:tile atTarget:target];
+                         [self revertAllTiles];
+                         [self clearBoard];
+                         [self startStopwatch];
+                         [self dealRandomAnagram];
+                         [_hud inGameMode];
+
+                     }];
+    
+    
 }
 
 //the user pressed the hint button
