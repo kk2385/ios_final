@@ -57,16 +57,15 @@
     hud.btnStart.alpha = 0.8;
     [hud addSubview: hud.btnStart];
     
+    //the revert letters button
+    hud.btnReset = [UIButton buttonWithType:UIButtonTypeCustom];
+    [hud.btnReset setTitle:@"Reset" forState:UIControlStateNormal];
+    hud.btnReset.titleLabel.font = kFontHUD;
     
-    //the start button
-    hud.btnStart = [UIButton buttonWithType:UIButtonTypeCustom];
-    [hud.btnStart setTitle:@"Start" forState:UIControlStateNormal];
-    hud.btnStart.titleLabel.font = kFontHUD;
-    
-    [hud.btnStart setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnStart.frame = CGRectMake(50, kScreenHeight/2-40, image.size.width, image.size.height);
-    hud.btnStart.alpha = 0.8;
-    [hud addSubview: hud.btnStart];
+    [hud.btnReset setBackgroundImage:image forState:UIControlStateNormal];
+    hud.btnReset.frame = CGRectMake(70, kScreenHeight/2-80, image.size.width, image.size.height);
+    hud.btnReset.alpha = 0.8;
+    [hud addSubview: hud.btnReset];
     
     return hud;
 }
@@ -75,6 +74,7 @@
 -(void) inGameMode {
     [self.btnStart setHidden: YES];
     [self.btnHelp setHidden: NO];
+    [self.btnReset setHidden: NO];
     [self.stopwatch setHidden: NO];
     [self.gamePoints setHidden: NO];
     for (UIView *subview in self.subviews) {
@@ -87,6 +87,7 @@
 -(void) inMenuMode {
     [self.btnStart setHidden: NO];
     [self.btnHelp setHidden: YES];
+    [self.btnReset setHidden: YES];
     [self.stopwatch setHidden: YES];
     [self.gamePoints setHidden: YES];
     for (UIView *subview in self.subviews) {
@@ -99,6 +100,7 @@
 -(void) inEndGameMode {
     [self.btnStart setHidden: NO];
     [self.btnHelp setHidden: YES];
+    [self.btnReset setHidden: YES];
     [self.stopwatch setHidden: YES];
     [self.gamePoints setHidden: YES];
     for (UIView *subview in self.subviews) {
