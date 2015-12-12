@@ -14,8 +14,8 @@
 
 //add more definitions here
 #define kTileMargin 10
-#define kFontHUD [UIFont fontWithName:@"comic andy" size:62.0]
-#define kFontHUDBig [UIFont fontWithName:@"comic andy" size:120.0]
+#define kFontHUD [UIFont fontWithName:@"comic andy" size:40.0]
+#define kFontHUDBig [UIFont fontWithName:@"comic andy" size:40.0]
 
 //audio defines
 #define kSoundDing  @"ding.mp3"
