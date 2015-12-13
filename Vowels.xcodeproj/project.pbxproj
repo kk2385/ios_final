@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8AB9736A1C1C1BB100213FEB /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB973691C1C1BB100213FEB /* Icon-60.png */; };
-		8AB9736C1C1C21EB00213FEB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB9736B1C1C21EB00213FEB /* background.png */; };
 		8AB973701C1CECDF00213FEB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB9736F1C1CECDF00213FEB /* background.png */; };
 		8AB973721C1CED2D00213FEB /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB973711C1CED2D00213FEB /* Icon-60.png */; };
 		E09595C01C1A6CB6009022EF /* StarDustView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BD1C1A6CB6009022EF /* StarDustView.m */; };
@@ -474,11 +472,9 @@
 			files = (
 				E0A42A111C1A479A00040344 /* level2.plist in Resources */,
 				E0A42A091C1A479A00040344 /* Default@2x.png in Resources */,
-				8AB9736A1C1C1BB100213FEB /* Icon-60.png in Resources */,
 				E0A42A0B1C1A479A00040344 /* slot.png in Resources */,
 				E0A429C11C1A453A00040344 /* LaunchScreen.storyboard in Resources */,
 				E0A429BE1C1A453A00040344 /* Assets.xcassets in Resources */,
-				8AB9736C1C1C21EB00213FEB /* background.png in Resources */,
 				E0A42A051C1A479A00040344 /* btn.png in Resources */,
 				E0A42A201C1A484500040344 /* ding.mp3 in Resources */,
 				E0A42A0D1C1A479A00040344 /* tile.png in Resources */,
