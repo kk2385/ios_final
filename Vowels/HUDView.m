@@ -24,40 +24,46 @@
     [hud addSubview: hud.stopwatch];
     
     //"points" label//////////////////////////////////////////////////////////////////////////////
-    hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(2, -45,160,160)];
+    hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(125,400,140,70)];
     hud.pointsLabel.backgroundColor = [UIColor clearColor];
     hud.pointsLabel.font = kFontHUD;
-    hud.pointsLabel.text = @"Points:";
+    hud.pointsLabel.text = @"Score :";
+    hud.pointsLabel.textColor = [UIColor whiteColor];
     [hud addSubview:hud.pointsLabel];
     
+    
+    
     //game over label
-    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth-310,kScreenHeight/2,140,70)];
+    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,140,300,100)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
-    hud.gameOverLabel.font = kFontHUD;
+    hud.gameOverLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:40];
+      hud.gameOverLabel.textColor = [UIColor redColor];
     hud.gameOverLabel.text = @"Game Over!";
     [hud addSubview:hud.gameOverLabel];
     
     //high score label
-    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/2-100,kScreenHeight-70,140,70)];
+    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, -45,160,160)];
     hud.highScoreLabel.backgroundColor = [UIColor clearColor];
     hud.highScoreLabel.font = kFontHUD;
     hud.highScoreLabel.text = @"High Score:";
+    hud.highScoreLabel.textColor = [UIColor whiteColor];
     [hud addSubview:hud.highScoreLabel];
     
     //high score points label
-    hud.highScorePoints = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/2+40,kScreenHeight-70,140,70)];
+    hud.highScorePoints = [[UILabel alloc] initWithFrame:CGRectMake(120, -45,160,160)];
     hud.highScorePoints.backgroundColor = [UIColor clearColor];
     hud.highScorePoints.font = kFontHUD;
     hud.highScorePoints.text = @"0";
+    hud.highScorePoints.textColor = [UIColor whiteColor];
     [hud addSubview:hud.highScorePoints];
 
     //the dynamic points label
-    hud.gamePoints = [CounterLabelView labelWithFont:kFontHUD frame:CGRectMake(kScreenWidth-170,kScreenHeight/2,200,70) andValue:0];
-    hud.gamePoints.textColor = [UIColor colorWithRed:0.38 green:0.098 blue:0.035 alpha:1] /*#611909*/;
+    hud.gamePoints = [CounterLabelView labelWithFont:kFontHUD frame:CGRectMake(220,400,140,70) andValue:0];
+    hud.gamePoints.textColor = [UIColor whiteColor];
     [hud addSubview: hud.gamePoints];
     
     //load the button image
-    UIImage* image = [UIImage imageNamed:@"btn"];
+    UIImage* image = [UIImage imageNamed:@"bt.png"];
     
     //the skip button///////////////////////////////////////////////////////////////////////////////
     hud.btnHelp = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -65,7 +71,7 @@
     hud.btnHelp.titleLabel.font = kFontHUD;
     
     [hud.btnHelp setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnHelp.frame = CGRectMake(20, kScreenHeight/2-40, 80, 40);
+    hud.btnHelp.frame = CGRectMake(20, 500, 80, 40);
     hud.btnHelp.alpha = 0.8;
     [hud addSubview: hud.btnHelp];
     
@@ -85,7 +91,7 @@
     hud.btnReset.titleLabel.font = kFontHUD;
     
     [hud.btnReset setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnReset.frame = CGRectMake(160, kScreenHeight/2-40, 145,40);
+    hud.btnReset.frame = CGRectMake(160, 500, 145,40);
     hud.btnReset.alpha = 0.8;
     [hud addSubview: hud.btnReset];
     

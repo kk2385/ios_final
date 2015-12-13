@@ -43,7 +43,7 @@
 //create a new target, store what letter should it match to
 -(instancetype)initWithLetter:(NSString*)letter andSideLength:(float)sideLength
 {
-    UIImage* img = [UIImage imageNamed:@"slot"];
+    UIImage* img = [UIImage imageNamed:@"constonant"];
     self = [super initWithImage: img];
     
     if (self != nil) {
@@ -67,7 +67,7 @@
         lblChar.textColor = [UIColor blackColor];
         lblChar.backgroundColor = [UIColor clearColor];
         lblChar.text = [letter uppercaseString];
-        lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:78.0*scale];
+        lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:50.0*scale];
         [self addSubview: lblChar];
         
         _letter = letter;
