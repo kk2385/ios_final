@@ -138,7 +138,7 @@
             break;
         }
     }
-    [self printAllTiles];
+//    [self printAllTiles];
     // check if target was found
     if (targetView!=nil) {
         
@@ -188,7 +188,7 @@
     tileView.isMatched = YES;
     targetView.guess = tileView.letter;
     
-    [self printGuessStatus];
+//    [self printGuessStatus];
     
     NSLog(@"PLACED TILE! Current guess: %@", [self getCurrentGuess]);
     tileView.userInteractionEnabled = NO;
