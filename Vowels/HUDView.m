@@ -27,7 +27,7 @@
     hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(2, -45,160,160)];
     hud.pointsLabel.backgroundColor = [UIColor clearColor];
     hud.pointsLabel.font = kFontHUD;
-    hud.pointsLabel.text = @" Points:";
+    hud.pointsLabel.text = @"Points:";
     [hud addSubview:hud.pointsLabel];
     
     //game over label
@@ -37,18 +37,24 @@
     hud.gameOverLabel.text = @"Game Over!";
     [hud addSubview:hud.gameOverLabel];
     
-    //end game score label
-    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/2+50,kScreenHeight/2,140,70)];
+    //high score label
+    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/2-100,kScreenHeight-70,140,70)];
     hud.highScoreLabel.backgroundColor = [UIColor clearColor];
     hud.highScoreLabel.font = kFontHUD;
-    hud.highScoreLabel.text = @"0";
+    hud.highScoreLabel.text = @"High Score:";
     [hud addSubview:hud.highScoreLabel];
     
+    //high score points label
+    hud.highScorePoints = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/2+40,kScreenHeight-70,140,70)];
+    hud.highScorePoints.backgroundColor = [UIColor clearColor];
+    hud.highScorePoints.font = kFontHUD;
+    hud.highScorePoints.text = @"0";
+    [hud addSubview:hud.highScorePoints];
+
     //the dynamic points label
     hud.gamePoints = [CounterLabelView labelWithFont:kFontHUD frame:CGRectMake(kScreenWidth-170,kScreenHeight/2,200,70) andValue:0];
     hud.gamePoints.textColor = [UIColor colorWithRed:0.38 green:0.098 blue:0.035 alpha:1] /*#611909*/;
     [hud addSubview: hud.gamePoints];
-    
     
     //load the button image
     UIImage* image = [UIImage imageNamed:@"btn"];
@@ -103,14 +109,11 @@
     self.btnHelp.alpha = 1;
     self.btnReset.alpha = 1;
     self.highScoreLabel.alpha = 1;
+    self.highScorePoints.alpha = 1;
     self.gameOverLabel.alpha = 1;
     self.stopwatch.alpha = 1;
     self.gamePoints.alpha = 1;
-    for (UIView *subview in self.subviews) {
-        if ([subview isKindOfClass:[UILabel class]]) {
-            subview.alpha = 1;
-        }
-    }
+    self.pointsLabel.alpha = 1;
 }
 
 -(void) makeAllHudElementsInvisible {
@@ -119,6 +122,7 @@
     self.btnHelp.alpha = 0;
     self.btnReset.alpha = 0;
     self.highScoreLabel.alpha = 0;
+    self.highScorePoints.alpha = 0;
     self.gameOverLabel.alpha = 0;
     self.stopwatch.alpha = 0;
     self.gamePoints.alpha = 0;
@@ -134,6 +138,8 @@
                          self.btnHelp.alpha = 1;
                          self.btnReset.alpha = 1;
                          self.stopwatch.alpha = 1;
+                         self.highScorePoints.alpha = 1;
+                         self.highScoreLabel.alpha = 1;
                          self.gamePoints.alpha = 1;
                          self.pointsLabel.alpha = 1;
                      } completion:^(BOOL finished) {
@@ -149,11 +155,8 @@
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.btnStart.alpha = 1;
-                         for (UIView *subview in self.subviews) {
-                             if ([subview isKindOfClass:[UILabel class]]) {
-                                 subview.alpha = 0;
-                             }
-                         }
+                         self.highScoreLabel.alpha = 1;
+                         self.highScorePoints.alpha = 1;
                      } completion:^(BOOL finished) {
                          
                      }];
@@ -162,15 +165,17 @@
 
 -(void) inEndGameMode {
     [self makeAllHudElementsInvisible];
-    self.highScoreLabel.text = [NSString stringWithFormat:@"%d", self.gamePoints.value];
+    self.highScorePoints.text = [NSString stringWithFormat:@"%d", MAX(self.gamePoints.value, [self.highScoreLabel.text integerValue])];
     [UIView animateWithDuration:0.2
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.btnStart.alpha = 1;
+                         self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.gameOverLabel.alpha = 1;
-                        
+                         self.gamePoints.alpha = 1;
+                         self.pointsLabel.alpha = 1;
                      } completion:^(BOOL finished) {
                          
                      }];
