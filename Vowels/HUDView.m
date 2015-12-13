@@ -18,6 +18,7 @@
     hud.userInteractionEnabled = YES;
     
     
+    
     //the stopwatch
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];
     hud.stopwatch.seconds = 0;
@@ -31,13 +32,13 @@
     hud.pointsLabel.textColor = [UIColor whiteColor];
     [hud addSubview:hud.pointsLabel];
     
-    
+
     
     //game over label
     hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,140,300,100)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
     hud.gameOverLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:40];
-      hud.gameOverLabel.textColor = [UIColor redColor];
+      hud.gameOverLabel.textColor = [UIColor blackColor];
     hud.gameOverLabel.text = @"Game Over!";
     [hud addSubview:hud.gameOverLabel];
     
@@ -46,7 +47,9 @@
     hud.highScoreLabel.backgroundColor = [UIColor clearColor];
     hud.highScoreLabel.font = kFontHUD;
     hud.highScoreLabel.text = @"High Score:";
-    hud.highScoreLabel.textColor = [UIColor whiteColor];
+    hud.highScoreLabel.textColor = [UIColor blueColor];
+     hud.highScoreLabel.shadowColor = [UIColor blackColor];
+     hud.highScoreLabel.shadowOffset = CGSizeMake(0, -1.0);
     [hud addSubview:hud.highScoreLabel];
     
     //high score points label
@@ -63,7 +66,7 @@
     [hud addSubview: hud.gamePoints];
     
     //load the button image
-    UIImage* image = [UIImage imageNamed:@"bt.png"];
+    UIImage* image = [UIImage imageNamed:@"nb.png"];
     
     //the skip button///////////////////////////////////////////////////////////////////////////////
     hud.btnHelp = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -81,7 +84,7 @@
     hud.btnStart.titleLabel.font = kFontHUD;
     
     [hud.btnStart setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnStart.frame = CGRectMake(50, kScreenHeight/2-40, image.size.width, image.size.height);
+    hud.btnStart.frame = CGRectMake(60, kScreenHeight/2-40, image.size.width, image.size.height);
     hud.btnStart.alpha = 0.8;
     [hud addSubview: hud.btnStart];
     
@@ -95,21 +98,13 @@
     hud.btnReset.alpha = 0.8;
     [hud addSubview: hud.btnReset];
     
+    
     return hud;
 }
 
 
 -(void) makeAllHudElementsVisible {
-//    [self.btnStart setHidden: NO];
-//    [self.btnHelp setHidden: NO];
-//    [self.btnReset setHidden: NO];
-//    [self.stopwatch setHidden: NO];
-//    [self.gamePoints setHidden: NO];
-//    for (UIView *subview in self.subviews) { //selects all UILabels (gameover, points: highscore)
-//        if ([subview isKindOfClass:[UILabel class]]) {
-//            [subview setHidden: NO];
-//        }
-//    }
+
     
     self.btnStart.alpha = 1;
     self.btnHelp.alpha = 1;
@@ -151,11 +146,13 @@
                      } completion:^(BOOL finished) {
                          
                      }];
+     self.backgroundColor = [UIColor clearColor];
     
 }
 
 -(void) inMenuMode {
     [self makeAllHudElementsInvisible];
+    
     [UIView animateWithDuration:0.2
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
@@ -166,6 +163,8 @@
                      } completion:^(BOOL finished) {
                          
                      }];
+   self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
+    
 
 }
 
@@ -182,9 +181,15 @@
                          self.gameOverLabel.alpha = 1;
                          self.gamePoints.alpha = 1;
                          self.pointsLabel.alpha = 1;
+                        
+                         
+                         
                      } completion:^(BOOL finished) {
                          
                      }];
+   
+    //set the menu screen display image
+     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
 }
 
 

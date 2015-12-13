@@ -18,10 +18,12 @@
 @property (strong, nonatomic) UILabel* highScoreLabel;
 @property (strong, nonatomic) UILabel* highScorePoints;
 @property (strong, nonatomic) UILabel* gameOverLabel;
+//@property (strong, nonatomic) UIView* menuScreen;
 
 @property (strong, nonatomic) UIButton* btnHelp;
 @property (strong, nonatomic) UIButton* btnStart;
 @property (strong, nonatomic) UIButton* btnReset;
+
 
 +(instancetype)viewWithRect:(CGRect)r;
 
