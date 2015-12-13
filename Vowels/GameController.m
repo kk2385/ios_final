@@ -148,7 +148,7 @@
         [self placeTile:tileView atTarget:targetView];
         
         //more stuff to do on success here
-        [self.audioController playEffect: kSoundDing];
+        [self.audioController playEffect: dragTileSound];
         
         //give points
 //        self.data.points += self.level.pointsPerTile;
@@ -158,28 +158,8 @@
         [self checkForSuccess];
     } else {
         [self actionRevertVowel: tileView];
+         [self.audioController playEffect: incorrectSound];
     }
-//        }
-//        } else {
-//
-//            //visualize the mistake
-//            [tileView randomize];
-//            
-//            [UIView animateWithDuration:0.35
-//                                  delay:0.00
-//                                options:UIViewAnimationOptionCurveEaseOut
-//                             animations:^{
-//                                 tileView.center = CGPointMake(tileView.center.x + randomf(-20, 20),
-//                                                               tileView.center.y + randomf(20, 30));
-//                             } completion:nil];
-//            
-//            //more stuff to do on failure here
-//            [self.audioController playEffect:kSoundWrong];
-//            
-//            //take out points
-//            self.data.points -= self.level.pointsPerTile/2;
-//            [self.hud.gamePoints countTo:self.data.points withDuration:.75];
-//        }
 }
 
 -(void)placeTile:(TileView*)tileView atTarget:(TargetView*)targetView
@@ -206,9 +186,7 @@
                          targetView.hidden = NO;
                      }];
     
-//    ExplodeView* explode = [[ExplodeView alloc] initWithFrame:CGRectMake(tileView.center.x,tileView.center.y,10,10)];
-//    [tileView.superview addSubview: explode];
-//    [tileView.superview sendSubviewToBack:explode];
+ 
     
     //generaete a new tile in case the same letter needs to be used again.
     [self generateLetterTile: tileView.letter];
@@ -235,6 +213,7 @@
         [self.hud.gamePoints countTo: self.data.points withDuration: 1.5];
         [self clearBoard];
         [self dealRandomAnagram];
+        [self.audioController playEffect: kSoundWin];
         return;
     
     }
@@ -330,6 +309,9 @@
 {
     _secondsLeft --;
     [self.hud.stopwatch setSeconds:_secondsLeft];
+    if (_secondsLeft <= 5) {
+         [self.audioController playEffect: timerEnding];
+    }
     
     if (_secondsLeft==0) {
         [self stopStopwatch];
@@ -349,6 +331,7 @@
 -(void) actionReset
 {
     [self revertAllTiles];
+      [self.audioController playEffect: clickSound];
 }
 
 -(void) actionStart
@@ -371,7 +354,7 @@
                          [_hud inGameMode];
 
                      }];
-    
+      [self.audioController playEffect: startSound];
     
 }
 
@@ -381,48 +364,8 @@
     [self revertAllTiles];
     [self clearBoard];
     [self dealRandomAnagram];
-//    self.hud.btnHelp.enabled = NO;
-//    
-//    self.data.points -= self.level.pointsPerTile/2;
-//    [self.hud.gamePoints countTo: self.data.points withDuration: 1.5];
-//    
-//    // find the first target, not matched yet
-//    TargetView* target = nil;
-//    for (TargetView* t in _targets) {
-//        if (t.isMatched==NO) {
-//            target = t;
-//            break;
-//        }
-//    }
-//    
-//    // find the first tile, matching the target
-//    TileView* tile = nil;
-//    for (TileView* t in _tiles) {
-//        if (t.isMatched==NO && [t.letter isEqualToString:target.letter]) {
-//            tile = t;
-//            break;
-//        }
-//    }
-//    
-//    // don't want the tile sliding under other tiles
-//    [self.gameView bringSubviewToFront:tile];
-//    
-//    //show the animation to the user
-//    [UIView animateWithDuration:1.5
-//                          delay:0
-//                        options:UIViewAnimationOptionCurveEaseOut
-//                     animations:^{
-//                         tile.center = target.center;
-//                     } completion:^(BOOL finished) {
-//                         // adjust view on spot
-//                         [self placeTile:tile atTarget:target];
-//                         
-//                         // check for finished game
-//                         [self checkForSuccess];
-//                         
-//                         // re-enable the button
-//                         self.hud.btnHelp.enabled = YES;
-//                     }];
+    [self.audioController playEffect: clickSound];
+
     
 }
 
@@ -471,6 +414,7 @@
             
             // don't want the tile sliding under other tiles
             [self.gameView bringSubviewToFront:tile];
+            [self.audioController playEffect: wrongWord];
             
             //show the animation to the user
             [UIView animateWithDuration:0.5

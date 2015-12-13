@@ -18,11 +18,15 @@
 #define kFontHUDBig [UIFont fontWithName:@"Papyrus " size:38]
 
 //audio defines
-#define kSoundDing  @"ding.mp3"
-#define kSoundWrong @"wrong.m4a"
-#define kSoundWin   @"win.mp3"
+#define dragTileSound  @"plop.mp3"
+#define incorrectSound @"badL.wav"
+#define kSoundWin   @"correct.aiff"
+#define wrongWord @"wrongWord.wav"
+#define clickSound @"clickSound.wav"
+#define startSound @"startSound.wav"
+#define timerEnding @"timerEnding.wav"
 
-#define kAudioEffectFiles @[kSoundDing, kSoundWrong, kSoundWin]
+#define kAudioEffectFiles @[dragTileSound, incorrectSound, kSoundWin, wrongWord, clickSound,startSound, timerEnding]
 
 //handy math functions
 #define rad2deg(x) x * 180 / M_PI
@@ -30,6 +34,6 @@
 #define randomf(minX,maxX) ((float)(arc4random() % (maxX - minX + 1)) + (float)minX)
 
 
-#define kGameTime 10
+#define kGameTime 12
 #define configed 1
 #endif
