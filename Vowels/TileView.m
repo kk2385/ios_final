@@ -69,7 +69,7 @@
     lblChar.textColor = [UIColor blackColor];
     lblChar.backgroundColor = [UIColor clearColor];
     lblChar.text = [letter uppercaseString];
-    lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:50.0*scale];
+    lblChar.font = [UIFont fontWithName:@"Verdana-Bold" size:50*scale];
     [self addSubview: lblChar];
   
     //begin in unmatched state

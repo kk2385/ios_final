@@ -31,10 +31,13 @@
     hud.pointsLabel.textColor = [UIColor whiteColor];
     [hud addSubview:hud.pointsLabel];
     
+    
+    
     //game over label
-    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth-310,kScreenHeight/2,140,70)];
+    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,140,300,100)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
-    hud.gameOverLabel.font = kFontHUD;
+    hud.gameOverLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:40];
+      hud.gameOverLabel.textColor = [UIColor redColor];
     hud.gameOverLabel.text = @"Game Over!";
     [hud addSubview:hud.gameOverLabel];
     
@@ -60,7 +63,7 @@
     [hud addSubview: hud.gamePoints];
     
     //load the button image
-    UIImage* image = [UIImage imageNamed:@"buttonBG.png"];
+    UIImage* image = [UIImage imageNamed:@"bt.png"];
     
     //the skip button///////////////////////////////////////////////////////////////////////////////
     hud.btnHelp = [UIButton buttonWithType:UIButtonTypeCustom];
