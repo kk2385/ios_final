@@ -56,6 +56,7 @@
 		E0A42A281C1A4B9600040344 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A42A271C1A4B9600040344 /* ViewController.m */; };
 		E0D149021C1A74BB0039D713 /* VowelDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D149011C1A74BB0039D713 /* VowelDictionary.m */; };
 		E0D149041C1A74CB0039D713 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = E0D149031C1A74CB0039D713 /* words.txt */; };
+		E0D149071C1D0C5F0039D713 /* GameLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D149061C1D0C5F0039D713 /* GameLayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		E0D149001C1A74BB0039D713 /* VowelDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VowelDictionary.h; sourceTree = "<group>"; };
 		E0D149011C1A74BB0039D713 /* VowelDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VowelDictionary.m; sourceTree = "<group>"; };
 		E0D149031C1A74CB0039D713 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		E0D149051C1D0C5F0039D713 /* GameLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayerView.h; sourceTree = "<group>"; };
+		E0D149061C1D0C5F0039D713 /* GameLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +352,8 @@
 				E09595CC1C1A6D13009022EF /* ExplodeView.m */,
 				E09595C81C1A6CF7009022EF /* HUDView.h */,
 				E09595C91C1A6CF7009022EF /* HUDView.m */,
+				E0D149051C1D0C5F0039D713 /* GameLayerView.h */,
+				E0D149061C1D0C5F0039D713 /* GameLayerView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */,
 				E09595D61C1A6D65009022EF /* GameData.m in Sources */,
 				E09595CD1C1A6D13009022EF /* ExplodeView.m in Sources */,
+				E0D149071C1D0C5F0039D713 /* GameLayerView.m in Sources */,
 				E09595DB1C1A6D82009022EF /* GameController.m in Sources */,
 				E09595C71C1A6CE9009022EF /* TargetView.m in Sources */,
 				E09595D81C1A6D7B009022EF /* AudioController.m in Sources */,

@@ -11,6 +11,7 @@
 #import "Level.h"
 #import "GameController.h"
 #import "HUDView.h"
+#import "GameLayerView.h"
 
 @interface ViewController () <UIActionSheetDelegate>
 @property (strong, nonatomic) GameController* controller;
@@ -33,22 +34,21 @@
 {
     [super viewDidLoad];
     
-    //add one layer for all game elements
-    UIView* gameLayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-    [self.view addSubview: gameLayer];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
-    
-    
-    
-    
-    self.controller.gameView = gameLayer;
-    
     //add one layer for all hud and controls
     HUDView* hudView = [HUDView viewWithRect:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self.view addSubview:hudView];
     
     self.controller.hud = hudView;
     [self.controller.hud inMenuMode];
+    
+    //add one layer for all game elements
+    GameLayerView* gameLayer = [[GameLayerView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    [self.view addSubview: gameLayer];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    
+    self.controller.gameView = gameLayer;
+    
+    
     
     //
     //  __weak ViewController* weakSelf = self;
