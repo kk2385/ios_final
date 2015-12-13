@@ -101,7 +101,7 @@
     for (int i=0;i<[vowels length];i++) {
         NSString* letter = [vowels substringWithRange:NSMakeRange(i, 1)];
         TargetView* bottom = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
-        bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/4*3);
+        bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), 350);
         [self.gameView addSubview:bottom];
         bottom.alpha = 0;
         [UIView animateWithDuration:0.5

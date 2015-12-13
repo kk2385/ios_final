@@ -14,8 +14,8 @@
 
 //add more definitions here
 #define kTileMargin 10
-#define kFontHUD [UIFont fontWithName:@"comic andy" size:40.0]
-#define kFontHUDBig [UIFont fontWithName:@"comic andy" size:40.0]
+#define kFontHUD [UIFont fontWithName:@"Papyrus " size:40.0]
+#define kFontHUDBig [UIFont fontWithName:@"Papyrus " size:40.0]
 
 //audio defines
 #define kSoundDing  @"ding.mp3"
@@ -30,6 +30,6 @@
 #define randomf(minX,maxX) ((float)(arc4random() % (maxX - minX + 1)) + (float)minX)
 
 
-#define kGameTime 20
+#define kGameTime 60
 #define configed 1
 #endif

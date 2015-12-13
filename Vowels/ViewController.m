@@ -44,7 +44,7 @@
     //add one layer for all game elements
     GameLayerView* gameLayer = [[GameLayerView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self.view addSubview: gameLayer];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     
     self.controller.gameView = gameLayer;
     

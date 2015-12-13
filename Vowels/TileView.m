@@ -50,7 +50,7 @@
 -(instancetype)initWithLetter:(NSString*)letter andSideLength:(float)sideLength
 {
   //BACKGROUND OF TILE////////////////////////////////
-  UIImage* img = [UIImage imageNamed:@"Icon-60.png"];
+  UIImage* img = [UIImage imageNamed:@"vowelb.png"];
   
   //create a new object
   self = [super initWithImage:img];

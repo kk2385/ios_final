@@ -43,7 +43,7 @@
 //create a new target, store what letter should it match to
 -(instancetype)initWithLetter:(NSString*)letter andSideLength:(float)sideLength
 {
-    UIImage* img = [UIImage imageNamed:@"slot"];
+    UIImage* img = [UIImage imageNamed:@"constonant"];
     self = [super initWithImage: img];
     
     if (self != nil) {
