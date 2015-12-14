@@ -41,11 +41,12 @@
 
     
     //game over label
-    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,140,300,100)];
+    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,400,400)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
     hud.gameOverLabel.font = [UIFont fontWithName:@"GurmukhiMN " size:40];
-      hud.gameOverLabel.textColor = [UIColor blackColor];
-    hud.gameOverLabel.text = @"Game Over!";
+    hud.gameOverLabel.textColor = [UIColor blackColor];
+    //hud.gameOverLabel.text = @"Game Over!";
+    hud.gameOverLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"GOVER.png"]];
     [hud addSubview:hud.gameOverLabel];
     
     //high score label
@@ -235,6 +236,7 @@
    
     //set the menu screen display image
      self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
+    //self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gameOver"]];
 }
 
 
