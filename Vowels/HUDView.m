@@ -99,6 +99,16 @@
     [hud addSubview: hud.btnReset];
     
     
+    //help text label
+    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, -45,160,160)];
+    hud.helpTextLabel.backgroundColor = [UIColor clearColor];
+    hud.helpTextLabel.font = kFontHUD;
+    hud.helpTextLabel.text = @"High Score:";
+    hud.helpTextLabel.textColor = [UIColor blueColor];
+    hud.helpTextLabel.shadowColor = [UIColor blackColor];
+    hud.helpTextLabel.shadowOffset = CGSizeMake(0, -1.0);
+    [hud addSubview:hud.highScoreLabel];
+    
     return hud;
 }
 

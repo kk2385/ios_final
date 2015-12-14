@@ -24,6 +24,7 @@
 @property (strong, nonatomic) UIButton* btnStart;
 @property (strong, nonatomic) UIButton* btnReset;
 
+@property (strong, nonatomic) UILabel* helpTextLabel;
 
 +(instancetype)viewWithRect:(CGRect)r;
 
