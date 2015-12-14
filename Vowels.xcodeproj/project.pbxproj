@@ -23,6 +23,7 @@
 		8AC50B471C1DE89000CD8723 /* timerEnding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B461C1DE89000CD8723 /* timerEnding.wav */; };
 		8AD2AD911C1EB05B0027E67E /* Untitled-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AD2AD901C1EB05B0027E67E /* Untitled-1.jpg */; };
 		8AD2AD931C1EB5CE0027E67E /* loadsc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AD2AD921C1EB5CE0027E67E /* loadsc.jpg */; };
+		8AD2AD951C1F56580027E67E /* appStartScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AD2AD941C1F56580027E67E /* appStartScreen.jpg */; };
 		8AF272821C1E0C1200088AA0 /* loadscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272811C1E0C1200088AA0 /* loadscreen.png */; };
 		8AF272841C1E0F8500088AA0 /* newButt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272831C1E0F8500088AA0 /* newButt.png */; };
 		8AF272861C1E104100088AA0 /* nb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272851C1E104100088AA0 /* nb.png */; };
@@ -106,6 +107,7 @@
 		8AC50B461C1DE89000CD8723 /* timerEnding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timerEnding.wav; sourceTree = "<group>"; };
 		8AD2AD901C1EB05B0027E67E /* Untitled-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Untitled-1.jpg"; sourceTree = "<group>"; };
 		8AD2AD921C1EB5CE0027E67E /* loadsc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loadsc.jpg; sourceTree = "<group>"; };
+		8AD2AD941C1F56580027E67E /* appStartScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = appStartScreen.jpg; sourceTree = "<group>"; };
 		8AF272811C1E0C1200088AA0 /* loadscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadscreen.png; sourceTree = "<group>"; };
 		8AF272831C1E0F8500088AA0 /* newButt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newButt.png; sourceTree = "<group>"; };
 		8AF272851C1E104100088AA0 /* nb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nb.png; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			children = (
 				E0A429F71C1A479A00040344 /* btn@2x.png */,
 				8A7196D61C1D4A4B003F62EC /* btn.png */,
+				8AD2AD941C1F56580027E67E /* appStartScreen.jpg */,
 				8AF272851C1E104100088AA0 /* nb.png */,
 				8AF272871C1E161400088AA0 /* menub.png */,
 				8A7196D01C1D2F43003F62EC /* constonant.png */,
@@ -518,6 +521,7 @@
 				8AC50B431C1DE37D00CD8723 /* clickSound.wav in Resources */,
 				8AC50B3F1C1DE03300CD8723 /* correct.aiff in Resources */,
 				8A7196D91C1D4B18003F62EC /* bt.png in Resources */,
+				8AD2AD951C1F56580027E67E /* appStartScreen.jpg in Resources */,
 				E0A42A091C1A479A00040344 /* Default@2x.png in Resources */,
 				8AF272821C1E0C1200088AA0 /* loadscreen.png in Resources */,
 				E0A42A0B1C1A479A00040344 /* slot.png in Resources */,
