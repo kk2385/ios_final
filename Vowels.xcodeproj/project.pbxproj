@@ -29,6 +29,7 @@
 		8AF272841C1E0F8500088AA0 /* newButt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272831C1E0F8500088AA0 /* newButt.png */; };
 		8AF272861C1E104100088AA0 /* nb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272851C1E104100088AA0 /* nb.png */; };
 		8AF272881C1E161500088AA0 /* menub.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272871C1E161400088AA0 /* menub.png */; };
+		E007F3821C1F6B6700F5F1CC /* CountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = E007F3811C1F6B6700F5F1CC /* CountDownView.m */; };
 		E09595C01C1A6CB6009022EF /* StarDustView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BD1C1A6CB6009022EF /* StarDustView.m */; };
 		E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BF1C1A6CB6009022EF /* StopwatchView.m */; };
 		E09595C41C1A6CC2009022EF /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C31C1A6CC2009022EF /* TileView.m */; };
@@ -114,6 +115,8 @@
 		8AF272831C1E0F8500088AA0 /* newButt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newButt.png; sourceTree = "<group>"; };
 		8AF272851C1E104100088AA0 /* nb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nb.png; sourceTree = "<group>"; };
 		8AF272871C1E161400088AA0 /* menub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menub.png; sourceTree = "<group>"; };
+		E007F3801C1F6B6700F5F1CC /* CountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownView.h; sourceTree = "<group>"; };
+		E007F3811C1F6B6700F5F1CC /* CountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownView.m; sourceTree = "<group>"; };
 		E09595BB1C1A6C10009022EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E09595BC1C1A6CB6009022EF /* StarDustView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDustView.h; sourceTree = "<group>"; };
 		E09595BD1C1A6CB6009022EF /* StarDustView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarDustView.m; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 				E09595BD1C1A6CB6009022EF /* StarDustView.m */,
 				E09595BE1C1A6CB6009022EF /* StopwatchView.h */,
 				E09595BF1C1A6CB6009022EF /* StopwatchView.m */,
+				E007F3801C1F6B6700F5F1CC /* CountDownView.h */,
+				E007F3811C1F6B6700F5F1CC /* CountDownView.m */,
 				E09595CE1C1A6D2D009022EF /* CounterLabelView.h */,
 				E09595CF1C1A6D2D009022EF /* CounterLabelView.m */,
 				E09595CB1C1A6D13009022EF /* ExplodeView.h */,
@@ -593,6 +598,7 @@
 				E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */,
 				E09595D61C1A6D65009022EF /* GameData.m in Sources */,
 				E09595CD1C1A6D13009022EF /* ExplodeView.m in Sources */,
+				E007F3821C1F6B6700F5F1CC /* CountDownView.m in Sources */,
 				E0D149071C1D0C5F0039D713 /* GameLayerView.m in Sources */,
 				E09595DB1C1A6D82009022EF /* GameController.m in Sources */,
 				E09595C71C1A6CE9009022EF /* TargetView.m in Sources */,

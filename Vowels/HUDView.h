@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "StopwatchView.h"
 #import "CounterLabelView.h"
+#import "CountDownView.h"
+
 
 @interface HUDView : UIView
 
 @property (strong, nonatomic) StopwatchView* stopwatch;
+@property (strong, nonatomic) CountDownView* countdown;
 @property (strong, nonatomic) CounterLabelView* gamePoints;
 @property (strong, nonatomic) UILabel* pointsLabel;
 @property (strong, nonatomic) UILabel* highScoreLabel;
@@ -28,6 +31,7 @@
 
 +(instancetype)viewWithRect:(CGRect)r;
 
+-(void) inCountDownMode;
 -(void) inGameMode;
 -(void) inMenuMode;
 -(void) inEndGameMode;
