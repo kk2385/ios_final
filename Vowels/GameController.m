@@ -23,6 +23,12 @@
     //stopwatch variables
     int _secondsLeft;
     NSTimer* _timer;
+    
+    
+    //stopwatch variables
+    int _countDownSecondsLeft;
+    NSTimer* _countDownTimer;
+    
 }
 
 //initialize the game controller
@@ -318,6 +324,50 @@
     }
 }
 
+
+
+-(void)startCountDownStopwatch
+{
+    //initialize the timer HUD
+    _countDownSecondsLeft = 3;
+    [self.hud.countdown setSeconds:_countDownSecondsLeft];
+    
+    //schedule a new timer
+    _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                              target:self
+                                            selector:@selector(tickCountDown:)
+                                            userInfo:nil
+                                             repeats:YES];
+}
+
+//stop the watch
+-(void)stopCountDownStopwatch
+{
+    [_countDownTimer invalidate];
+    _countDownTimer = nil;
+    [self beginGame];
+}
+
+//stopwatch on tick
+-(void)tickCountDown:(NSTimer*)timer
+{
+    _countDownSecondsLeft --;
+    [self.hud.countdown setSeconds:_countDownSecondsLeft];
+    
+    if (_countDownSecondsLeft==0) {
+        [self stopCountDownStopwatch];
+    }
+}
+
+-(void) beginGame {
+    [self revertAllTiles];
+    [self clearBoard];
+    [self startStopwatch];
+    [self dealRandomAnagram];
+    [_hud inGameMode];
+}
+
+
 //connect the Hint button
 -(void)setHud:(HUDView *)hud
 {
@@ -328,10 +378,17 @@
 
 }
 
+
+-(void) actionStartCountDown {
+    [self startCountDownStopwatch];
+    [_hud inCountDownMode];
+}
+
+
 -(void) actionReset
 {
     [self revertAllTiles];
-      [self.audioController playEffect: clickSound];
+    [self.audioController playEffect: clickSound];
 }
 
 -(void) actionStart
@@ -339,6 +396,7 @@
     
     self.data.points = 0;
     [self.hud.gamePoints countTo:self.data.points withDuration:0.1];
+    
     [UIView animateWithDuration:0.3
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
@@ -347,13 +405,24 @@
                      } completion:^(BOOL finished) {
                          // adjust view on spot
                          //                         [self placeTile:tile atTarget:target];
-                         [self revertAllTiles];
-                         [self clearBoard];
-                         [self startStopwatch];
-                         [self dealRandomAnagram];
-                         [_hud inGameMode];
-
+                         [self actionStartCountDown];
+                         
                      }];
+//    [UIView animateWithDuration:0.3
+//                          delay:0
+//                        options:UIViewAnimationOptionCurveEaseOut
+//                     animations:^{
+//                         self.hud.btnStart.alpha = 0;
+//                     } completion:^(BOOL finished) {
+//                         // adjust view on spot
+//                         //                         [self placeTile:tile atTarget:target];
+//                         [self revertAllTiles];
+//                         [self clearBoard];
+//                         [self startStopwatch];
+//                         [self dealRandomAnagram];
+//                         [_hud inGameMode];
+//
+//                     }];
       [self.audioController playEffect: startSound];
     
 }

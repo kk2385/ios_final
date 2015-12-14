@@ -24,6 +24,11 @@
     hud.stopwatch.seconds = 0;
     [hud addSubview: hud.stopwatch];
     
+    //the countdown
+    hud.countdown = [[CountDownView alloc] initWithFrame: CGRectMake(kScreenWidth/2, kScreenHeight/2, 300, 100)];
+    hud.countdown.seconds = 3;
+    [hud addSubview: hud.countdown];
+    
     //"points" label//////////////////////////////////////////////////////////////////////////////
     hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(125,400,140,70)];
     hud.pointsLabel.backgroundColor = [UIColor clearColor];
@@ -125,6 +130,7 @@
     self.highScorePoints.alpha = 1;
     self.gameOverLabel.alpha = 1;
     self.stopwatch.alpha = 1;
+    self.countdown.alpha = 1;
     self.gamePoints.alpha = 1;
     self.pointsLabel.alpha = 1;
     self.helpTextLabel.alpha = 1;
@@ -139,6 +145,7 @@
     self.highScorePoints.alpha = 0;
     self.gameOverLabel.alpha = 0;
     self.stopwatch.alpha = 0;
+    self.countdown.alpha = 0;
     self.gamePoints.alpha = 0;
     self.pointsLabel.alpha = 0;
     self.helpTextLabel.alpha = 0;
@@ -162,6 +169,20 @@
                      }];
      self.backgroundColor = [UIColor clearColor];
     
+}
+
+-(void) inCountDownMode {
+    [self makeAllHudElementsInvisible];
+    
+    [UIView animateWithDuration:0.1
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.countdown.alpha = 1;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
 }
 
 -(void) inMenuMode {
