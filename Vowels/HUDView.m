@@ -109,14 +109,16 @@
     
     
     //help text label
-    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, -45,160,160)];
+    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/5, kScreenHeight/2-40,200,400)];
     hud.helpTextLabel.backgroundColor = [UIColor clearColor];
     hud.helpTextLabel.font = kFontHUD;
-    hud.helpTextLabel.text = @"High Score:";
+    hud.helpTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    hud.helpTextLabel.numberOfLines = 0;
+    hud.helpTextLabel.text = @"Drag vowels to blank slots to complete the missing word";
     hud.helpTextLabel.textColor = [UIColor blueColor];
     hud.helpTextLabel.shadowColor = [UIColor blackColor];
     hud.helpTextLabel.shadowOffset = CGSizeMake(0, -1.0);
-    [hud addSubview:hud.highScoreLabel];
+    [hud addSubview:hud.helpTextLabel];
     
     return hud;
 }
@@ -134,6 +136,7 @@
     self.stopwatch.alpha = 1;
     self.gamePoints.alpha = 1;
     self.pointsLabel.alpha = 1;
+    self.helpTextLabel.alpha = 1;
 }
 
 -(void) makeAllHudElementsInvisible {
@@ -147,6 +150,8 @@
     self.stopwatch.alpha = 0;
     self.gamePoints.alpha = 0;
     self.pointsLabel.alpha = 0;
+    self.helpTextLabel.alpha = 0;
+    
 }
 
 -(void) inGameMode {
@@ -163,7 +168,6 @@
                          self.gamePoints.alpha = 1;
                          self.pointsLabel.alpha = 1;
                      } completion:^(BOOL finished) {
-                         
                      }];
      self.backgroundColor = [UIColor clearColor];
     
@@ -179,6 +183,7 @@
                          self.btnStart.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.highScorePoints.alpha = 1;
+                         self.helpTextLabel.alpha = 1;
                      } completion:^(BOOL finished) {
                          
                      }];
