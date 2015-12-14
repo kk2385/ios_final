@@ -13,8 +13,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadsc.jpg" id="0qK-eO-L76">
-                                <rect key="frame" x="-40" y="-135" width="378" height="748"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appStartScreen.jpg" id="0qK-eO-L76">
+                                <rect key="frame" x="-38" y="-81" width="378" height="748"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -27,6 +27,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loadsc.jpg" width="1024" height="2000"/>
+        <image name="appStartScreen.jpg" width="1024" height="2000"/>
     </resources>
 </document>
