@@ -16,7 +16,7 @@
 #define kTileMargin 10
 #define kFontHUD [UIFont fontWithName:@"Papyrus " size:38]
 #define kFontHUDBig [UIFont fontWithName:@"Papyrus " size:38]
-
+#define timerFont [UIFont fontWithName:@"Verdana-Bold" size:30]
 //audio defines
 #define dragTileSound  @"plop.mp3"
 #define incorrectSound @"badL.wav"
@@ -34,6 +34,6 @@
 #define randomf(minX,maxX) ((float)(arc4random() % (maxX - minX + 1)) + (float)minX)
 
 
-#define kGameTime 8
+#define kGameTime 20
 #define configed 1
 #endif

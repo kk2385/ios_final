@@ -8,6 +8,7 @@
 
 #import "HUDView.h"
 #import "config.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation HUDView
 
@@ -25,11 +26,11 @@
     [hud addSubview: hud.stopwatch];
     
     //"points" label//////////////////////////////////////////////////////////////////////////////
-    hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(125,400,140,70)];
+    hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/5,400,140,100)];
     hud.pointsLabel.backgroundColor = [UIColor clearColor];
-    hud.pointsLabel.font = kFontHUD;
+    hud.pointsLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:35];
     hud.pointsLabel.text = @"Score :";
-    hud.pointsLabel.textColor = [UIColor whiteColor];
+    hud.pointsLabel.textColor = [UIColor colorWithRed:0.46 green:0.46 blue:0.46 alpha:1.0];
     [hud addSubview:hud.pointsLabel];
     
 
@@ -43,27 +44,35 @@
     [hud addSubview:hud.gameOverLabel];
     
     //high score label
-    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, -45,160,160)];
-    hud.highScoreLabel.backgroundColor = [UIColor clearColor];
+    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 25,117,30)];
+    hud.highScoreLabel.backgroundColor = [UIColor colorWithRed:0.18 green:0.58 blue:0.79 alpha:1.0];
+    hud.highScoreLabel.layer.masksToBounds = YES;
+  hud.highScoreLabel.layer.cornerRadius = 8;
+    
     hud.highScoreLabel.font = kFontHUD;
-    hud.highScoreLabel.text = @"High Score:";
-    hud.highScoreLabel.textColor = [UIColor blueColor];
-     hud.highScoreLabel.shadowColor = [UIColor blackColor];
-     hud.highScoreLabel.shadowOffset = CGSizeMake(0, -1.0);
+    hud.highScoreLabel.text = @" High Score:";
+    hud.highScoreLabel.textColor = [UIColor whiteColor];
+//     hud.highScoreLabel.shadowColor = [UIColor blackColor];
+//     hud.highScoreLabel.shadowOffset = CGSizeMake(0, -1.0);
+    
     [hud addSubview:hud.highScoreLabel];
     
     //high score points label
-    hud.highScorePoints = [[UILabel alloc] initWithFrame:CGRectMake(120, -45,160,160)];
+    hud.highScorePoints = [[UILabel alloc] initWithFrame:CGRectMake(112, 25,110,30)];
     hud.highScorePoints.backgroundColor = [UIColor clearColor];
     hud.highScorePoints.font = kFontHUD;
     hud.highScorePoints.text = @"0";
+    hud.highScorePoints.layer.zPosition = 1;
     hud.highScorePoints.textColor = [UIColor whiteColor];
     [hud addSubview:hud.highScorePoints];
+    [hud bringSubviewToFront:hud.highScorePoints];
+
 
     //the dynamic points label
-    hud.gamePoints = [CounterLabelView labelWithFont:kFontHUD frame:CGRectMake(220,400,140,70) andValue:0];
-    hud.gamePoints.textColor = [UIColor whiteColor];
+    hud.gamePoints = [CounterLabelView labelWithFont:[UIFont fontWithName:@"Verdana-Bold" size:35] frame:CGRectMake(kScreenWidth/1.6,400,140,100) andValue:0];
+    hud.gamePoints.textColor = [UIColor colorWithRed:0.46 green:0.46 blue:0.46 alpha:1.0];
     [hud addSubview: hud.gamePoints];
+    
     
     //load the button image
     UIImage* image = [UIImage imageNamed:@"nb.png"];
@@ -84,7 +93,7 @@
     hud.btnStart.titleLabel.font = kFontHUD;
     
     [hud.btnStart setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnStart.frame = CGRectMake(60, kScreenHeight/2-40, image.size.width, image.size.height);
+    hud.btnStart.frame = CGRectMake(kScreenWidth/2.9, kScreenHeight/2-40, image.size.width/2, image.size.height/2);
     hud.btnStart.alpha = 0.8;
     [hud addSubview: hud.btnStart];
     
