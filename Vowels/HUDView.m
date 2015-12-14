@@ -31,9 +31,9 @@
     [hud addSubview: hud.countdown];
     
     //"points" label//////////////////////////////////////////////////////////////////////////////
-    hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/5,400,140,100)];
+    hud.pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/3,400,140,100)];
     hud.pointsLabel.backgroundColor = [UIColor clearColor];
-    hud.pointsLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:35];
+    hud.pointsLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:35];
     hud.pointsLabel.text = @"Score :";
     hud.pointsLabel.textColor = [UIColor colorWithRed:0.46 green:0.46 blue:0.46 alpha:1.0];
     [hud addSubview:hud.pointsLabel];
@@ -43,7 +43,7 @@
     //game over label
     hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,140,300,100)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
-    hud.gameOverLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:40];
+    hud.gameOverLabel.font = [UIFont fontWithName:@"GurmukhiMN " size:40];
       hud.gameOverLabel.textColor = [UIColor blackColor];
     hud.gameOverLabel.text = @"Game Over!";
     [hud addSubview:hud.gameOverLabel];
@@ -74,7 +74,7 @@
 
 
     //the dynamic points label
-    hud.gamePoints = [CounterLabelView labelWithFont:[UIFont fontWithName:@"Verdana-Bold" size:35] frame:CGRectMake(kScreenWidth/1.6,400,140,100) andValue:0];
+    hud.gamePoints = [CounterLabelView labelWithFont:[UIFont fontWithName:@"MarkerFelt-Thin" size:35] frame:CGRectMake(kScreenWidth/1.6,400,140,100) andValue:0];
     hud.gamePoints.textColor = [UIColor colorWithRed:0.46 green:0.46 blue:0.46 alpha:1.0];
     [hud addSubview: hud.gamePoints];
     
