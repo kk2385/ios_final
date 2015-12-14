@@ -14,12 +14,12 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:CGRectMake(245, -45, 160, 160)];//stopwatch position
+    self = [super initWithFrame:CGRectMake(kScreenWidth/2, kScreenHeight/3, 160, 160)];//stopwatch position
     if (self) {
         // Initialization code
         
         self.backgroundColor = [UIColor clearColor];
-        self.font = kFontHUDBig;
+        self.font = timerFont;
         self.textColor = [UIColor whiteColor];
         
     }
