@@ -127,6 +127,19 @@
     hud.btnReset.alpha = 0.8;
     [hud addSubview: hud.btnReset];
     
+    //the menu letters button
+    hud.btnMenu = [UIButton buttonWithType:UIButtonTypeCustom];
+    [hud.btnMenu setTitle:@"MENU" forState:UIControlStateNormal];
+    hud.btnMenu.titleLabel.font = [UIFont fontWithName:@"Avenir" size:40];
+    
+    [hud.btnMenu setBackgroundImage:image forState:UIControlStateNormal];
+    hud.btnMenu.frame = CGRectMake(160, 500, 145,50);
+    hud.btnMenu.center = CGPointMake(hud.center.x, hud.center.y+kScreenHeight/7.5 + 60);
+    hud.btnMenu.alpha = 0.8;
+    [hud addSubview: hud.btnMenu];
+
+    
+    
     
     //help text label
     hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/6.5, kScreenHeight/2-40,240,400)];
@@ -150,9 +163,10 @@
 -(void) makeAllHudElementsVisible {
 
     self.logo.alpha = 1;
-    self.btnStart.alpha = 1;
-    self.btnHelp.alpha = 1;
-    self.btnReset.alpha = 1;
+    self.btnStart.alpha = 0.8;
+    self.btnHelp.alpha = 0.8;
+    self.btnReset.alpha = 0.8;
+    self.btnMenu.alpha = 0.8;
     self.highScoreLabel.alpha = 1;
     self.highScorePoints.alpha = 1;
     self.gameOverLabel.alpha = 1;
@@ -173,6 +187,7 @@
                          self.btnStart.alpha = 0;
                          self.btnHelp.alpha = 0;
                          self.btnReset.alpha = 0;
+                         self.btnMenu.alpha = 0;
                          self.highScoreLabel.alpha = 0;
                          self.highScorePoints.alpha = 0;
                          self.gameOverLabel.alpha = 0;
@@ -247,7 +262,8 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.btnStart.alpha = 1;
+                         self.btnStart.alpha = 0.8;
+                         self.btnMenu.alpha = 0.8;
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.gameOverLabel.alpha = 1;

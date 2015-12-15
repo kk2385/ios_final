@@ -385,7 +385,7 @@
     [hud.btnHelp addTarget:self action:@selector(actionHint) forControlEvents:UIControlEventTouchUpInside];
     [hud.btnStart addTarget:self action:@selector(actionStart) forControlEvents:UIControlEventTouchUpInside];
     [hud.btnReset addTarget:self action:@selector(actionReset) forControlEvents:UIControlEventTouchUpInside];
-
+    [hud.btnMenu addTarget:self action:@selector(actionMenu) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -393,6 +393,11 @@
     [self startCountDownStopwatch];
     [_hud inCountDownMode];
 }
+
+-(void) actionMenu {
+    [_hud inMenuMode];
+}
+
 
 
 -(void) actionReset

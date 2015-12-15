@@ -27,6 +27,8 @@
 @property (strong, nonatomic) UIButton* btnHelp;
 @property (strong, nonatomic) UIButton* btnStart;
 @property (strong, nonatomic) UIButton* btnReset;
+@property (strong, nonatomic) UIButton* btnMenu;
+
 
 @property (strong, nonatomic) UILabel* helpTextLabel;
 
