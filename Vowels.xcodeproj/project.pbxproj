@@ -16,7 +16,6 @@
 		8AC50B3D1C1DDFB600CD8723 /* badL.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B3C1C1DDFB600CD8723 /* badL.wav */; };
 		8AC50B3F1C1DE03300CD8723 /* correct.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B3E1C1DE03300CD8723 /* correct.aiff */; };
 		8AC50B411C1DE22900CD8723 /* wrongWord.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B401C1DE22900CD8723 /* wrongWord.wav */; };
-		8AC50B431C1DE37D00CD8723 /* clickSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B421C1DE37D00CD8723 /* clickSound.wav */; };
 		8AC50B451C1DE6CF00CD8723 /* startSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B441C1DE6CF00CD8723 /* startSound.wav */; };
 		8AC50B471C1DE89000CD8723 /* timerEnding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AC50B461C1DE89000CD8723 /* timerEnding.wav */; };
 		8AD2AD951C1F56580027E67E /* appStartScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AD2AD941C1F56580027E67E /* appStartScreen.jpg */; };
@@ -32,6 +31,7 @@
 		8AF272841C1E0F8500088AA0 /* newButt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272831C1E0F8500088AA0 /* newButt.png */; };
 		8AF272861C1E104100088AA0 /* nb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272851C1E104100088AA0 /* nb.png */; };
 		E007F3821C1F6B6700F5F1CC /* CountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = E007F3811C1F6B6700F5F1CC /* CountDownView.m */; };
+		E007F3841C209CCD00F5F1CC /* clickSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E007F3831C209CCD00F5F1CC /* clickSound.wav */; };
 		E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BF1C1A6CB6009022EF /* StopwatchView.m */; };
 		E09595C41C1A6CC2009022EF /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C31C1A6CC2009022EF /* TileView.m */; };
 		E09595C71C1A6CE9009022EF /* TargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C61C1A6CE9009022EF /* TargetView.m */; };
@@ -85,7 +85,6 @@
 		8AC50B3C1C1DDFB600CD8723 /* badL.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = badL.wav; sourceTree = "<group>"; };
 		8AC50B3E1C1DE03300CD8723 /* correct.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = correct.aiff; sourceTree = "<group>"; };
 		8AC50B401C1DE22900CD8723 /* wrongWord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongWord.wav; sourceTree = "<group>"; };
-		8AC50B421C1DE37D00CD8723 /* clickSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickSound.wav; sourceTree = "<group>"; };
 		8AC50B441C1DE6CF00CD8723 /* startSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = startSound.wav; sourceTree = "<group>"; };
 		8AC50B461C1DE89000CD8723 /* timerEnding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timerEnding.wav; sourceTree = "<group>"; };
 		8AD2AD941C1F56580027E67E /* appStartScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = appStartScreen.jpg; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		8AF272851C1E104100088AA0 /* nb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nb.png; sourceTree = "<group>"; };
 		E007F3801C1F6B6700F5F1CC /* CountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownView.h; sourceTree = "<group>"; };
 		E007F3811C1F6B6700F5F1CC /* CountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownView.m; sourceTree = "<group>"; };
+		E007F3831C209CCD00F5F1CC /* clickSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickSound.wav; sourceTree = "<group>"; };
 		E09595BB1C1A6C10009022EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E09595BE1C1A6CB6009022EF /* StopwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopwatchView.h; sourceTree = "<group>"; };
 		E09595BF1C1A6CB6009022EF /* StopwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopwatchView.m; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 				8AC50B3E1C1DE03300CD8723 /* correct.aiff */,
 				8AC50B461C1DE89000CD8723 /* timerEnding.wav */,
 				8AC50B441C1DE6CF00CD8723 /* startSound.wav */,
-				8AC50B421C1DE37D00CD8723 /* clickSound.wav */,
+				E007F3831C209CCD00F5F1CC /* clickSound.wav */,
 				8AC50B401C1DE22900CD8723 /* wrongWord.wav */,
 				8AC50B381C1DD8B100CD8723 /* plop.mp3 */,
 			);
@@ -447,7 +447,6 @@
 				8AC50B451C1DE6CF00CD8723 /* startSound.wav in Resources */,
 				8A67AF9A1C1FE0E900CFCDE9 /* logoBig.png in Resources */,
 				8AD2ADAD1C1FA8140027E67E /* mmj.jpg in Resources */,
-				8AC50B431C1DE37D00CD8723 /* clickSound.wav in Resources */,
 				8AC50B3F1C1DE03300CD8723 /* correct.aiff in Resources */,
 				8AD2AD951C1F56580027E67E /* appStartScreen.jpg in Resources */,
 				8AD2ADA31C1F9FC70027E67E /* strscreen.jpg in Resources */,
@@ -463,6 +462,7 @@
 				8A7196D11C1D2F43003F62EC /* constonant.png in Resources */,
 				E0D149041C1A74CB0039D713 /* words.txt in Resources */,
 				8AC50B391C1DD8B100CD8723 /* plop.mp3 in Resources */,
+				E007F3841C209CCD00F5F1CC /* clickSound.wav in Resources */,
 				8AC50B3D1C1DDFB600CD8723 /* badL.wav in Resources */,
 				8AD2ADA51C1FA0770027E67E /* menuscr.jpg in Resources */,
 				8AD2AD9F1C1F97EE0027E67E /* overGame.png in Resources */,
