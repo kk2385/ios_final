@@ -18,7 +18,11 @@
     HUDView* hud = [[HUDView alloc] initWithFrame:r];
     hud.userInteractionEnabled = YES;
     
-    
+    UIImage* logoImage = [UIImage imageNamed: @"logoSmall.png"];
+    hud.logo = [[UIImageView alloc] initWithImage: logoImage];
+    hud.logo.frame = CGRectMake(kScreenWidth/6, kScreenHeight/8, 230, 230);
+    hud.btnStart.center = CGPointMake(hud.center.x, hud.center.y-kScreenHeight/5);
+    [hud addSubview: hud.logo];
     
     //the stopwatch
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];
@@ -60,7 +64,7 @@
     hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 25,117,30)];
     hud.highScoreLabel.backgroundColor = [UIColor colorWithRed:0.18 green:0.58 blue:0.79 alpha:1.0];
     hud.highScoreLabel.layer.masksToBounds = YES;
-  hud.highScoreLabel.layer.cornerRadius = 8;
+    hud.highScoreLabel.layer.cornerRadius = 8;
     
     hud.highScoreLabel.font = kFontHUD;
     hud.highScoreLabel.text = @" High Score:";
@@ -102,11 +106,12 @@
     
     //the start button///////////////////////////////////////////////////////////////////////////////
     hud.btnStart = [UIButton buttonWithType:UIButtonTypeCustom];
-    [hud.btnStart setTitle:@"Start" forState:UIControlStateNormal];
-    hud.btnStart.titleLabel.font = kFontHUD;
+    [hud.btnStart setTitle:@"PLAY" forState:UIControlStateNormal];
+    hud.btnStart.titleLabel.font = [UIFont fontWithName:@"Avenir" size:40];
     
     [hud.btnStart setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnStart.frame = CGRectMake(kScreenWidth/2.8, kScreenHeight/2, image.size.width/2, image.size.height/2);
+    hud.btnStart.frame = CGRectMake(kScreenWidth/2.8, kScreenHeight/1.7, image.size.width/1.3, image.size.height/1.3);
+    hud.btnStart.center = CGPointMake(hud.center.x, hud.center.y+kScreenHeight/7.5);
     hud.btnStart.alpha = 0.8;
     [hud addSubview: hud.btnStart];
     
@@ -124,13 +129,16 @@
     //help text label
     hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/6.5, kScreenHeight/2-40,240,400)];
     hud.helpTextLabel.backgroundColor = [UIColor clearColor];
-    hud.helpTextLabel.font = [UIFont fontWithName:@"Lucida Grande" size:16];
+    hud.helpTextLabel.font = [UIFont fontWithName:@"Avenir" size:25];
     hud.helpTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
     hud.helpTextLabel.numberOfLines = 0;
+    hud.helpTextLabel.textAlignment = NSTextAlignmentCenter;
     hud.helpTextLabel.text = @"Drag vowels to blank slots to complete the missing word";
     hud.helpTextLabel.textColor = [UIColor blackColor];
    // hud.helpTextLabel.shadowColor = [UIColor blackColor];
     hud.helpTextLabel.shadowOffset = CGSizeMake(0, -1.0);
+    hud.helpTextLabel.center = CGPointMake(hud.center.x, hud.center.y+kScreenHeight/3);
+
     [hud addSubview:hud.helpTextLabel];
     
     return hud;
@@ -139,7 +147,7 @@
 
 -(void) makeAllHudElementsVisible {
 
-    
+    self.logo.alpha = 1;
     self.btnStart.alpha = 1;
     self.btnHelp.alpha = 1;
     self.btnReset.alpha = 1;
@@ -155,6 +163,7 @@
 
 -(void) makeAllHudElementsInvisible {
     
+    self.logo.alpha = 0;
     self.btnStart.alpha = 0;
     self.btnHelp.alpha = 0;
     self.btnReset.alpha = 0;
@@ -199,7 +208,7 @@
                      } completion:^(BOOL finished) {
                          
                      }];
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mmj.jpg"]];
+//    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mmj.jpg"]];
 }
 
 -(void) inMenuMode {
@@ -209,6 +218,7 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
+                         self.logo.alpha = 1;
                          self.btnStart.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.highScorePoints.alpha = 1;
@@ -216,7 +226,7 @@
                      } completion:^(BOOL finished) {
                          
                      }];
-   self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mmj.jpg"]];
+//   self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mmj.jpg"]];
     
 
 }
@@ -242,7 +252,7 @@
                      }];
    
     //set the menu screen display image
-     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"strscreen.jpg"]];
+//     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"strscreen.jpg"]];
    
 }
 

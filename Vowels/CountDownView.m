@@ -19,7 +19,7 @@
         // Initialization code
         
         self.backgroundColor = [UIColor clearColor];
-        self.font = timerFont;
+        self.font = countDownFont;
         self.textColor = [UIColor blackColor  ];
         
     }
