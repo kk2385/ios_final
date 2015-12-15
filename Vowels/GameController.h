@@ -27,7 +27,11 @@ typedef void (^CallbackBlock)();
 
 @property (strong, nonatomic) VowelDictionary* dict;
 
+@property int secondsLeft;
+
 //display a new anagram on the screen
--(void)showRandomWord;
+-(void) showRandomWord;
+-(void) actionReset;
+-(BOOL) inGame;
 
 @end

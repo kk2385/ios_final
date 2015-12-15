@@ -50,4 +50,23 @@
     [super viewDidAppear:animated];
 }
 
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if(event.type == UIEventSubtypeMotionShake)
+    {
+        NSLog(@"shake gesture!");
+        if ([self.controller inGame]) {
+            NSLog(@"in game!");
+            [self.controller actionReset];
+        }
+    }
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+
 @end
