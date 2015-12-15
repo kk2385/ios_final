@@ -1,13 +1,8 @@
 //
 //  GameController.h
-//  Anagrams
-//
-//  Created by Marin Todorov on 16/02/2013.
-//  Copyright (c) 2013 Underplot ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Level.h"
 #import "TileView.h"
 #import "HUDView.h"
 #import "GameData.h"
@@ -22,8 +17,6 @@ typedef void (^CallbackBlock)();
 @property (weak, nonatomic) UIView* gameView;
 
 //the current level
-@property (strong, nonatomic) Level* level;
-
 @property (weak, nonatomic) HUDView* hud;
 
 @property (strong, nonatomic) GameData* data;
@@ -35,6 +28,6 @@ typedef void (^CallbackBlock)();
 @property (strong, nonatomic) VowelDictionary* dict;
 
 //display a new anagram on the screen
--(void)dealRandomAnagram;
+-(void)showRandomWord;
 
 @end

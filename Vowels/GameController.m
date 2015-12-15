@@ -1,17 +1,11 @@
 //
 //  GameController.m
-//  Anagrams
-//
-//  Created by Marin Todorov on 16/02/2013.
-//  Copyright (c) 2013 Underplot ltd. All rights reserved.
 //
 
 #import "GameController.h"
 #import "config.h"
 #import "TileView.h"
 #import "TargetView.h"
-#import "ExplodeView.h"
-#import "StarDustView.h"
 
 @implementation GameController
 {
@@ -49,7 +43,7 @@
 }
 
 //fetches a random anagram, deals the letter tiles and creates the targets
--(void)dealRandomAnagram
+-(void)showRandomWord
 {
     //random word
     NSString* vowelWord = [self.dict getRandomWord];
@@ -76,7 +70,7 @@
             letter = @" ";
         }
         TargetView* target = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
-        target.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/4);
+        target.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/3);
         
         [self.gameView addSubview:target];
         target.alpha = 0;
@@ -107,7 +101,7 @@
     for (int i=0;i<[vowels length];i++) {
         NSString* letter = [vowels substringWithRange:NSMakeRange(i, 1)];
         TargetView* bottom = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
-        bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), 350);
+        bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/2);
         [self.gameView addSubview:bottom];
         bottom.alpha = 0;
         [UIView animateWithDuration:0.5
@@ -126,14 +120,9 @@
     [self generateLetterTile:@"i"];
     [self generateLetterTile:@"o"];
     [self generateLetterTile:@"u"];
-
-    
-    
-//    //start the timer
-//    [self startStopwatch];
 }
 
-//a tile was dragged, check if matches a target
+//handler for after dragging a tile.
 -(void)tileView:(TileView*)tileView didDragToPoint:(CGPoint)pt
 {
     TargetView* targetView = nil;
@@ -157,7 +146,6 @@
         [self.audioController playEffect: dragTileSound];
         
         //give points
-//        self.data.points += self.level.pointsPerTile;
         [self.hud.gamePoints countTo:self.data.points withDuration:1.5];
         
         //check for finished game
@@ -218,43 +206,11 @@
         self.data.points += 1;
         [self.hud.gamePoints countTo: self.data.points withDuration: 1.5];
         [self clearBoard];
-        [self dealRandomAnagram];
+        [self showRandomWord];
         [self.audioController playEffect: kSoundWin];
         return;
     
     }
-    
-    //stop the stopwatch
-    [self stopStopwatch];
-    
-    //the anagram is completed!
-    [self.audioController playEffect:kSoundWin];
-    
-    //win animation
-    TargetView* firstTarget = _targets[0];
-    
-    int startX = 0;
-    int endX = kScreenWidth + 300;
-    int startY = firstTarget.center.y;
-    
-    StarDustView* stars = [[StarDustView alloc] initWithFrame:CGRectMake(startX, startY, 10, 10)];
-    [self.gameView addSubview:stars];
-    [self.gameView sendSubviewToBack:stars];
-    
-    [UIView animateWithDuration:3
-                          delay:0
-                        options:UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         stars.center = CGPointMake(endX, startY);
-                     } completion:^(BOOL finished) {
-                         
-                         //game finished
-                         [stars removeFromSuperview];
-                         
-                         //when animation is finished, show menu
-                         [self clearBoard];
-                         self.onAnagramSolved();
-                     }];
 }
 
 -(NSString*) getCurrentGuess
@@ -330,11 +286,7 @@
 {
     //initialize the timer HUD
     _countDownSecondsLeft = 3;
-
-
     [self.hud.countdown setSeconds:_countDownSecondsLeft];
-    
-   
     
     //schedule a new timer
     _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -342,8 +294,6 @@
                                             selector:@selector(tickCountDown:)
                                             userInfo:nil
                                              repeats:YES];
-    
-
 }
 
 //stop the watch
@@ -362,8 +312,9 @@
     }
     _countDownSecondsLeft --;
     [self.hud.countdown setSeconds:_countDownSecondsLeft];
-    
+
     if (_countDownSecondsLeft==0) {
+        self.hud.countdown.text = @"";
         [self stopCountDownStopwatch];
     }
 }
@@ -372,7 +323,7 @@
     [self revertAllTiles];
     [self clearBoard];
     [self startStopwatch];
-    [self dealRandomAnagram];
+    [self showRandomWord];
     [_hud inGameMode];
 }
 
@@ -384,7 +335,7 @@
     [hud.btnHelp addTarget:self action:@selector(actionHint) forControlEvents:UIControlEventTouchUpInside];
     [hud.btnStart addTarget:self action:@selector(actionStart) forControlEvents:UIControlEventTouchUpInside];
     [hud.btnReset addTarget:self action:@selector(actionReset) forControlEvents:UIControlEventTouchUpInside];
-
+    [hud.btnMenu addTarget:self action:@selector(actionMenu) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -392,6 +343,15 @@
     [self startCountDownStopwatch];
     [_hud inCountDownMode];
 }
+
+-(void) actionMenu {
+    [self.audioController playEffect: clickSound];
+    [_timer invalidate];
+    _timer = nil;
+    [self clearBoard];
+    [_hud inMenuMode];
+}
+
 
 
 -(void) actionReset
@@ -417,21 +377,6 @@
                          [self actionStartCountDown];
                          
                      }];
-//    [UIView animateWithDuration:0.3
-//                          delay:0
-//                        options:UIViewAnimationOptionCurveEaseOut
-//                     animations:^{
-//                         self.hud.btnStart.alpha = 0;
-//                     } completion:^(BOOL finished) {
-//                         // adjust view on spot
-//                         //                         [self placeTile:tile atTarget:target];
-//                         [self revertAllTiles];
-//                         [self clearBoard];
-//                         [self startStopwatch];
-//                         [self dealRandomAnagram];
-//                         [_hud inGameMode];
-//
-//                     }];
       [self.audioController playEffect: startSound];
     
 }
@@ -441,10 +386,8 @@
 {
     [self revertAllTiles];
     [self clearBoard];
-    [self dealRandomAnagram];
+    [self showRandomWord];
     [self.audioController playEffect: clickSound];
-
-    
 }
 
 
@@ -556,5 +499,4 @@
         [view removeFromSuperview];
     }
 }
-
 @end

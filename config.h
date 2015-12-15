@@ -1,9 +1,5 @@
 //
 //  config.h
-//  Anagrams
-//
-//  Created by Marin Todorov on 16/02/2013.
-//  Copyright (c) 2013 Underplot ltd. All rights reserved.
 //
 
 #ifndef configed
@@ -14,10 +10,10 @@
 
 //add more definitions here
 #define kTileMargin 10
-#define kFontHUD [UIFont fontWithName:@"Papyrus " size:38]
-#define kFontHUDBig [UIFont fontWithName:@"Papyrus " size:38]
+#define kFontHUD [UIFont fontWithName:@"Avenir" size:18]
+#define kFontHUDBig [UIFont fontWithName:@"Avenir" size:40]
 #define timerFont [UIFont fontWithName:@"Noteworthy-Bold" size:30]
-#define countDown [UIFont fontWithName:@"Noteworthy-Bold" size:60]
+#define countDownFont [UIFont fontWithName:@"Avenir" size:100]
 //audio defines
 #define dragTileSound  @"plop.mp3"
 #define incorrectSound @"badL.wav"
@@ -35,6 +31,6 @@
 #define randomf(minX,maxX) ((float)(arc4random() % (maxX - minX + 1)) + (float)minX)
 
 
-#define kGameTime 6
+#define kGameTime 15
 #define configed 1
 #endif

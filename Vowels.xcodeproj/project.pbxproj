@@ -33,14 +33,11 @@
 		8AF272841C1E0F8500088AA0 /* newButt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272831C1E0F8500088AA0 /* newButt.png */; };
 		8AF272861C1E104100088AA0 /* nb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF272851C1E104100088AA0 /* nb.png */; };
 		E007F3821C1F6B6700F5F1CC /* CountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = E007F3811C1F6B6700F5F1CC /* CountDownView.m */; };
-		E09595C01C1A6CB6009022EF /* StarDustView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BD1C1A6CB6009022EF /* StarDustView.m */; };
 		E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BF1C1A6CB6009022EF /* StopwatchView.m */; };
 		E09595C41C1A6CC2009022EF /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C31C1A6CC2009022EF /* TileView.m */; };
 		E09595C71C1A6CE9009022EF /* TargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C61C1A6CE9009022EF /* TargetView.m */; };
 		E09595CA1C1A6CF7009022EF /* HUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C91C1A6CF7009022EF /* HUDView.m */; };
-		E09595CD1C1A6D13009022EF /* ExplodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595CC1C1A6D13009022EF /* ExplodeView.m */; };
 		E09595D01C1A6D2D009022EF /* CounterLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595CF1C1A6D2D009022EF /* CounterLabelView.m */; };
-		E09595D31C1A6D50009022EF /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595D21C1A6D50009022EF /* Level.m */; };
 		E09595D61C1A6D65009022EF /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595D51C1A6D65009022EF /* GameData.m */; };
 		E09595D81C1A6D7B009022EF /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595D71C1A6D7B009022EF /* AudioController.m */; };
 		E09595DB1C1A6D82009022EF /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595DA1C1A6D82009022EF /* GameController.m */; };
@@ -58,9 +55,6 @@
 		E0A429F11C1A460A00040344 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A429F01C1A460A00040344 /* CoreGraphics.framework */; };
 		E0A42A0A1C1A479A00040344 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A429FB1C1A479A00040344 /* particle.png */; };
 		E0A42A0B1C1A479A00040344 /* slot.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A429FC1C1A479A00040344 /* slot.png */; };
-		E0A42A101C1A479A00040344 /* level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0A42A011C1A479A00040344 /* level1.plist */; };
-		E0A42A111C1A479A00040344 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0A42A021C1A479A00040344 /* level2.plist */; };
-		E0A42A121C1A479A00040344 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0A42A031C1A479A00040344 /* level3.plist */; };
 		E0A42A131C1A479A00040344 /* Comic_Andy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0A42A041C1A479A00040344 /* Comic_Andy.ttf */; };
 		E0A42A281C1A4B9600040344 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A42A271C1A4B9600040344 /* ViewController.m */; };
 		E0D149021C1A74BB0039D713 /* VowelDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D149011C1A74BB0039D713 /* VowelDictionary.m */; };
@@ -115,8 +109,6 @@
 		E007F3801C1F6B6700F5F1CC /* CountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownView.h; sourceTree = "<group>"; };
 		E007F3811C1F6B6700F5F1CC /* CountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownView.m; sourceTree = "<group>"; };
 		E09595BB1C1A6C10009022EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E09595BC1C1A6CB6009022EF /* StarDustView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarDustView.h; sourceTree = "<group>"; };
-		E09595BD1C1A6CB6009022EF /* StarDustView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarDustView.m; sourceTree = "<group>"; };
 		E09595BE1C1A6CB6009022EF /* StopwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopwatchView.h; sourceTree = "<group>"; };
 		E09595BF1C1A6CB6009022EF /* StopwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopwatchView.m; sourceTree = "<group>"; };
 		E09595C21C1A6CC2009022EF /* TileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileView.h; sourceTree = "<group>"; };
@@ -125,18 +117,14 @@
 		E09595C61C1A6CE9009022EF /* TargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetView.m; sourceTree = "<group>"; };
 		E09595C81C1A6CF7009022EF /* HUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDView.h; sourceTree = "<group>"; };
 		E09595C91C1A6CF7009022EF /* HUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDView.m; sourceTree = "<group>"; };
-		E09595CB1C1A6D13009022EF /* ExplodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplodeView.h; sourceTree = "<group>"; };
-		E09595CC1C1A6D13009022EF /* ExplodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplodeView.m; sourceTree = "<group>"; };
 		E09595CE1C1A6D2D009022EF /* CounterLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterLabelView.h; sourceTree = "<group>"; };
 		E09595CF1C1A6D2D009022EF /* CounterLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterLabelView.m; sourceTree = "<group>"; };
-		E09595D11C1A6D50009022EF /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		E09595D21C1A6D50009022EF /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		E09595D41C1A6D65009022EF /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
 		E09595D51C1A6D65009022EF /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
 		E09595D71C1A6D7B009022EF /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		E09595D91C1A6D82009022EF /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		E09595DA1C1A6D82009022EF /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
-		E0A429AE1C1A453A00040344 /* Vowels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vowels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A429AE1C1A453A00040344 /* Vowel Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vowel Blocks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A429B21C1A453A00040344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0A429B41C1A453A00040344 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E0A429B51C1A453A00040344 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,9 +143,6 @@
 		E0A429F01C1A460A00040344 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E0A429FB1C1A479A00040344 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particle.png; path = ../particle.png; sourceTree = "<group>"; };
 		E0A429FC1C1A479A00040344 /* slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slot.png; path = ../slot.png; sourceTree = "<group>"; };
-		E0A42A011C1A479A00040344 /* level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = level1.plist; path = ../level1.plist; sourceTree = "<group>"; };
-		E0A42A021C1A479A00040344 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = level2.plist; path = ../level2.plist; sourceTree = "<group>"; };
-		E0A42A031C1A479A00040344 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = level3.plist; path = ../level3.plist; sourceTree = "<group>"; };
 		E0A42A041C1A479A00040344 /* Comic_Andy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Comic_Andy.ttf; path = ../Comic_Andy.ttf; sourceTree = "<group>"; };
 		E0A42A221C1A49A200040344 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; };
 		E0A42A261C1A4B0B00040344 /* AudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
@@ -213,7 +198,7 @@
 		E0A429AF1C1A453A00040344 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E0A429AE1C1A453A00040344 /* Vowels.app */,
+				E0A429AE1C1A453A00040344 /* Vowel Blocks.app */,
 				E0A429C71C1A453B00040344 /* VowelsTests.xctest */,
 				E0A429D21C1A453B00040344 /* VowelsUITests.xctest */,
 			);
@@ -224,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				E0A42A221C1A49A200040344 /* config.h */,
-				E0A429F51C1A475000040344 /* Levels */,
 				E0A429F41C1A474200040344 /* Classes */,
 				E0A429F31C1A472E00040344 /* Assets */,
 				E0A429B41C1A453A00040344 /* AppDelegate.h */,
@@ -282,16 +266,6 @@
 				E0A42A231C1A4A7E00040344 /* models */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		E0A429F51C1A475000040344 /* Levels */ = {
-			isa = PBXGroup;
-			children = (
-				E0A42A011C1A479A00040344 /* level1.plist */,
-				E0A42A021C1A479A00040344 /* level2.plist */,
-				E0A42A031C1A479A00040344 /* level3.plist */,
-			);
-			name = Levels;
 			sourceTree = "<group>";
 		};
 		E0A42A141C1A47B700040344 /* Images */ = {
@@ -356,8 +330,6 @@
 			children = (
 				E0D149001C1A74BB0039D713 /* VowelDictionary.h */,
 				E0D149011C1A74BB0039D713 /* VowelDictionary.m */,
-				E09595D11C1A6D50009022EF /* Level.h */,
-				E09595D21C1A6D50009022EF /* Level.m */,
 				E09595D41C1A6D65009022EF /* GameData.h */,
 				E09595D51C1A6D65009022EF /* GameData.m */,
 			);
@@ -371,16 +343,12 @@
 				E09595C31C1A6CC2009022EF /* TileView.m */,
 				E09595C51C1A6CE9009022EF /* TargetView.h */,
 				E09595C61C1A6CE9009022EF /* TargetView.m */,
-				E09595BC1C1A6CB6009022EF /* StarDustView.h */,
-				E09595BD1C1A6CB6009022EF /* StarDustView.m */,
 				E09595BE1C1A6CB6009022EF /* StopwatchView.h */,
 				E09595BF1C1A6CB6009022EF /* StopwatchView.m */,
 				E007F3801C1F6B6700F5F1CC /* CountDownView.h */,
 				E007F3811C1F6B6700F5F1CC /* CountDownView.m */,
 				E09595CE1C1A6D2D009022EF /* CounterLabelView.h */,
 				E09595CF1C1A6D2D009022EF /* CounterLabelView.m */,
-				E09595CB1C1A6D13009022EF /* ExplodeView.h */,
-				E09595CC1C1A6D13009022EF /* ExplodeView.m */,
 				E09595C81C1A6CF7009022EF /* HUDView.h */,
 				E09595C91C1A6CF7009022EF /* HUDView.m */,
 				E0D149051C1D0C5F0039D713 /* GameLayerView.h */,
@@ -417,7 +385,7 @@
 			);
 			name = Vowels;
 			productName = Vowels;
-			productReference = E0A429AE1C1A453A00040344 /* Vowels.app */;
+			productReference = E0A429AE1C1A453A00040344 /* Vowel Blocks.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E0A429C61C1A453B00040344 /* VowelsTests */ = {
@@ -508,7 +476,6 @@
 				8A67AF981C1FE0E400CFCDE9 /* logoSmall.png in Resources */,
 				8AC50B451C1DE6CF00CD8723 /* startSound.wav in Resources */,
 				8A67AF9A1C1FE0E900CFCDE9 /* logoBig.png in Resources */,
-				E0A42A111C1A479A00040344 /* level2.plist in Resources */,
 				8AD2ADAD1C1FA8140027E67E /* mmj.jpg in Resources */,
 				8AC50B431C1DE37D00CD8723 /* clickSound.wav in Resources */,
 				8AC50B3F1C1DE03300CD8723 /* correct.aiff in Resources */,
@@ -526,7 +493,6 @@
 				E0A42A0A1C1A479A00040344 /* particle.png in Resources */,
 				8AB973721C1CED2D00213FEB /* Icon-60.png in Resources */,
 				8AD2ADA11C1F995D0027E67E /* jgo.png in Resources */,
-				E0A42A121C1A479A00040344 /* level3.plist in Resources */,
 				8AF272841C1E0F8500088AA0 /* newButt.png in Resources */,
 				8A7196D11C1D2F43003F62EC /* constonant.png in Resources */,
 				E0D149041C1A74CB0039D713 /* words.txt in Resources */,
@@ -535,7 +501,6 @@
 				8AD2ADA51C1FA0770027E67E /* menuscr.jpg in Resources */,
 				8AD2AD9F1C1F97EE0027E67E /* overGame.png in Resources */,
 				8A7196CF1C1D2EDB003F62EC /* bg.png in Resources */,
-				E0A42A101C1A479A00040344 /* level1.plist in Resources */,
 				E0A429BC1C1A453A00040344 /* Main.storyboard in Resources */,
 				8AD2AD9D1C1F7E3E0027E67E /* GOVER.png in Resources */,
 			);
@@ -564,16 +529,13 @@
 			files = (
 				E0D149021C1A74BB0039D713 /* VowelDictionary.m in Sources */,
 				E09595D01C1A6D2D009022EF /* CounterLabelView.m in Sources */,
-				E09595D31C1A6D50009022EF /* Level.m in Sources */,
 				E09595CA1C1A6CF7009022EF /* HUDView.m in Sources */,
 				E0A42A281C1A4B9600040344 /* ViewController.m in Sources */,
 				E0A429B61C1A453A00040344 /* AppDelegate.m in Sources */,
 				E09595C41C1A6CC2009022EF /* TileView.m in Sources */,
-				E09595C01C1A6CB6009022EF /* StarDustView.m in Sources */,
 				E0A429B31C1A453A00040344 /* main.m in Sources */,
 				E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */,
 				E09595D61C1A6D65009022EF /* GameData.m in Sources */,
-				E09595CD1C1A6D13009022EF /* ExplodeView.m in Sources */,
 				E007F3821C1F6B6700F5F1CC /* CountDownView.m in Sources */,
 				E0D149071C1D0C5F0039D713 /* GameLayerView.m in Sources */,
 				E09595DB1C1A6D82009022EF /* GameController.m in Sources */,
@@ -670,6 +632,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Vowel Blocks";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -706,6 +669,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Vowel Blocks";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -718,7 +682,7 @@
 				INFOPLIST_FILE = Vowels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = af.Vowels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vowel Blocks";
 			};
 			name = Debug;
 		};
@@ -729,7 +693,7 @@
 				INFOPLIST_FILE = Vowels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = af.Vowels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vowel Blocks";
 			};
 			name = Release;
 		};

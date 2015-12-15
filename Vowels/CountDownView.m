@@ -14,13 +14,18 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:CGRectMake(kScreenWidth/2, kScreenHeight/3, 160, 160)];//stopwatch position
+    self = [super initWithFrame:CGRectMake(kScreenWidth/2, kScreenHeight/3, 100, 100)];//stopwatch position
     if (self) {
         // Initialization code
         
-        self.backgroundColor = [UIColor clearColor];
-        self.font = timerFont;
-        self.textColor = [UIColor blackColor  ];
+        self.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent: 0.5];
+        self.textAlignment = NSTextAlignmentCenter;
+        self.font = countDownFont;
+        self.textColor = [UIColor blackColor];
+        self.layer.borderColor = [UIColor blackColor].CGColor;
+        self.layer.borderWidth = 5.0f;
+        self.layer.masksToBounds = YES;
+        self.layer.cornerRadius = 8;
         
     }
     return self;
