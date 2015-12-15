@@ -96,12 +96,12 @@
     
     //the skip button///////////////////////////////////////////////////////////////////////////////
     hud.btnHelp = [UIButton buttonWithType:UIButtonTypeCustom];
-    [hud.btnHelp setTitle:@"Skip" forState:UIControlStateNormal];
-    hud.btnHelp.titleLabel.font = kFontHUD;
+    [hud.btnHelp setTitle:@"SKIP" forState:UIControlStateNormal];
+    hud.btnHelp.titleLabel.font = [UIFont fontWithName:@"Avenir" size:40];
     
     [hud.btnHelp setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnHelp.frame = CGRectMake(20, 500, 80, 40);
-    hud.btnHelp.center = CGPointMake(kScreenWidth*2/3, hud.center.y+kScreenHeight/3.3);
+    hud.btnHelp.frame = CGRectMake(20, 500, 100, 50);
+    hud.btnHelp.center = CGPointMake(kScreenWidth*2/3+30, hud.center.y+kScreenHeight/3.3);
     hud.btnHelp.alpha = 0.8;
     [hud addSubview: hud.btnHelp];
     
@@ -118,12 +118,12 @@
     
     //the revert letters button
     hud.btnReset = [UIButton buttonWithType:UIButtonTypeCustom];
-    [hud.btnReset setTitle:@"Reset Word" forState:UIControlStateNormal];
-    hud.btnReset.titleLabel.font = kFontHUD;
+    [hud.btnReset setTitle:@"RESET" forState:UIControlStateNormal];
+    hud.btnReset.titleLabel.font = [UIFont fontWithName:@"Avenir" size:40];
     
     [hud.btnReset setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnReset.frame = CGRectMake(160, 500, 145,40);
-    hud.btnReset.center = CGPointMake(kScreenWidth/3, hud.center.y+kScreenHeight/3.3);
+    hud.btnReset.frame = CGRectMake(160, 500, 145,50);
+    hud.btnReset.center = CGPointMake(kScreenWidth/3-10, hud.center.y+kScreenHeight/3.3);
     hud.btnReset.alpha = 0.8;
     [hud addSubview: hud.btnReset];
     
@@ -193,8 +193,8 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         self.btnHelp.alpha = 1;
-                         self.btnReset.alpha = 1;
+                         self.btnHelp.alpha = 0.8;
+                         self.btnReset.alpha = 0.8;
                          self.stopwatch.alpha = 1;
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
