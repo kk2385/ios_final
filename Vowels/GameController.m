@@ -1,9 +1,6 @@
 //
 //  GameController.m
-//  Anagrams
 //
-//  Created by Marin Todorov on 16/02/2013.
-//  Copyright (c) 2013 Underplot ltd. All rights reserved.
 //
 
 #import "GameController.h"
@@ -47,7 +44,7 @@
 }
 
 //fetches a random anagram, deals the letter tiles and creates the targets
--(void)dealRandomAnagram
+-(void)showRandomWord
 {
     //random word
     NSString* vowelWord = [self.dict getRandomWord];
@@ -216,7 +213,7 @@
         self.data.points += 1;
         [self.hud.gamePoints countTo: self.data.points withDuration: 1.5];
         [self clearBoard];
-        [self dealRandomAnagram];
+        [self showRandomWord];
         [self.audioController playEffect: kSoundWin];
         return;
     
@@ -339,7 +336,7 @@
     [self revertAllTiles];
     [self clearBoard];
     [self startStopwatch];
-    [self dealRandomAnagram];
+    [self showRandomWord];
     [_hud inGameMode];
 }
 
@@ -413,7 +410,7 @@
 {
     [self revertAllTiles];
     [self clearBoard];
-    [self dealRandomAnagram];
+    [self showRandomWord];
     [self.audioController playEffect: clickSound];
 
     

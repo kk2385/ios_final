@@ -8,7 +8,6 @@
 
 #import "config.h"
 #import "ViewController.h"
-#import "Level.h"
 #import "GameController.h"
 #import "HUDView.h"
 #import "GameLayerView.h"
@@ -91,8 +90,7 @@
     int levelNum = buttonIndex+1;
     
     //3 load the level, fire up the game
-    self.controller.level = [Level levelWithNum:levelNum];
-    [self.controller dealRandomAnagram];
+    [self.controller showRandomWord];
 }
 
 @end

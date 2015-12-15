@@ -35,6 +35,6 @@
 #define randomf(minX,maxX) ((float)(arc4random() % (maxX - minX + 1)) + (float)minX)
 
 
-#define kGameTime 6
+#define kGameTime 15
 #define configed 1
 #endif
