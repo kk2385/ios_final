@@ -19,8 +19,9 @@
         // Initialization code
         
         self.backgroundColor = [UIColor clearColor];
+        self.textAlignment = NSTextAlignmentCenter;
         self.font = countDownFont;
-        self.textColor = [UIColor blackColor  ];
+        self.textColor = [UIColor blackColor];
         
     }
     return self;

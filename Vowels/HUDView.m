@@ -208,7 +208,7 @@
 
 -(void) inCountDownMode {
     [self makeAllHudElementsInvisible];
-    
+    self.countdown.center = self.center;
     [UIView animateWithDuration:0.8
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
