@@ -1,9 +1,5 @@
 //
 //  ViewController.m
-//  Anagrams
-//
-//  Created by Marin Todorov on 16/02/2013.
-//  Copyright (c) 2013 Underplot ltd. All rights reserved.
 //
 
 #import "config.h"
@@ -46,51 +42,12 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     
     self.controller.gameView = gameLayer;
-    
-    
-    
-    //
-    //  __weak ViewController* weakSelf = self;
-    //  self.controller.onAnagramSolved = ^(){
-    //    [weakSelf showLevelMenu];
-    //  };
-//    self.controller.level = [Level levelWithNum:1];
-//    [self.controller dealRandomAnagram];
 }
 
 //show tha game menu on app start
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    //  [self showLevelMenu];
-}
-
-#pragma mark - Game manu
-//show the level selector menu
--(void)showLevelMenu
-{
-    UIActionSheet* action = [[UIActionSheet alloc] initWithTitle:@"Play @ difficulty level:"
-                                                        delegate:self
-                                               cancelButtonTitle:nil
-                                          destructiveButtonTitle:nil
-                                               otherButtonTitles:@"Easy-peasy", @"Challenge accepted" , @"I'm totally hard-core", nil];
-    [action showInView:self.view];
-}
-
-//level was selected, load it up and start the game
--(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    //1 check if the user tapped outside the menu
-    if (buttonIndex==-1) {
-        [self showLevelMenu];
-        return;
-    }
-    
-    //2 map index 0 to level 1, etc...
-    int levelNum = buttonIndex+1;
-    
-    //3 load the level, fire up the game
-    [self.controller showRandomWord];
 }
 
 @end

@@ -1,7 +1,6 @@
 //
 //  GameController.m
 //
-//
 
 #import "GameController.h"
 #import "config.h"
@@ -121,14 +120,9 @@
     [self generateLetterTile:@"i"];
     [self generateLetterTile:@"o"];
     [self generateLetterTile:@"u"];
-
-    
-    
-//    //start the timer
-//    [self startStopwatch];
 }
 
-//a tile was dragged, check if matches a target
+//handler for after dragging a tile.
 -(void)tileView:(TileView*)tileView didDragToPoint:(CGPoint)pt
 {
     TargetView* targetView = nil;
@@ -152,7 +146,6 @@
         [self.audioController playEffect: dragTileSound];
         
         //give points
-//        self.data.points += self.level.pointsPerTile;
         [self.hud.gamePoints countTo:self.data.points withDuration:1.5];
         
         //check for finished game
@@ -386,21 +379,6 @@
                          [self actionStartCountDown];
                          
                      }];
-//    [UIView animateWithDuration:0.3
-//                          delay:0
-//                        options:UIViewAnimationOptionCurveEaseOut
-//                     animations:^{
-//                         self.hud.btnStart.alpha = 0;
-//                     } completion:^(BOOL finished) {
-//                         // adjust view on spot
-//                         //                         [self placeTile:tile atTarget:target];
-//                         [self revertAllTiles];
-//                         [self clearBoard];
-//                         [self startStopwatch];
-//                         [self dealRandomAnagram];
-//                         [_hud inGameMode];
-//
-//                     }];
       [self.audioController playEffect: startSound];
     
 }
@@ -525,5 +503,4 @@
         [view removeFromSuperview];
     }
 }
-
 @end
