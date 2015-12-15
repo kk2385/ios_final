@@ -293,6 +293,7 @@
                                             selector:@selector(tickCountDown:)
                                             userInfo:nil
                                              repeats:YES];
+     [self.audioController playEffect: timerEnding];
 }
 
 //stop the watch
