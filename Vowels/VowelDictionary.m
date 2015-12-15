@@ -28,7 +28,7 @@
     
     for (int i = 0; i < array.count; i++) {
         NSString *curr = array[i];
-        if ([curr length] >= 5 && [curr length] <= 10)  {
+        if ([curr length] >= 4 && [curr length] <= 7)  {
             [dict addToDictionary:array[i]];
         }
     }
