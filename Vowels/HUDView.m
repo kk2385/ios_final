@@ -106,7 +106,7 @@
     hud.btnStart.titleLabel.font = kFontHUD;
     
     [hud.btnStart setBackgroundImage:image forState:UIControlStateNormal];
-    hud.btnStart.frame = CGRectMake(kScreenWidth/2.9, kScreenHeight/2-40, image.size.width/2, image.size.height/2);
+    hud.btnStart.frame = CGRectMake(kScreenWidth/2.8, kScreenHeight/2, image.size.width/2, image.size.height/2);
     hud.btnStart.alpha = 0.8;
     [hud addSubview: hud.btnStart];
     
@@ -122,9 +122,9 @@
     
     
     //help text label
-    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/5, kScreenHeight/2-40,240,400)];
+    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/6.5, kScreenHeight/2-40,240,400)];
     hud.helpTextLabel.backgroundColor = [UIColor clearColor];
-    hud.helpTextLabel.font = [UIFont fontWithName:@"Noteworthy-Bold" size:16];
+    hud.helpTextLabel.font = [UIFont fontWithName:@"Lucida Grande" size:16];
     hud.helpTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
     hud.helpTextLabel.numberOfLines = 0;
     hud.helpTextLabel.text = @"Drag vowels to blank slots to complete the missing word";
