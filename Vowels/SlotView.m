@@ -2,9 +2,9 @@
 //  TargetView.m
 //
 
-#import "TargetView.h"
+#import "SlotView.h"
 
-@implementation TargetView
+@implementation SlotView
 
 - (id)init
 {

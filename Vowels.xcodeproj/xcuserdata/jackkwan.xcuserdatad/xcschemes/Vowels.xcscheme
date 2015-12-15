@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E0A429AD1C1A453A00040344"
-               BuildableName = "Vowels.app"
+               BuildableName = "Vowel Blocks.app"
                BlueprintName = "Vowels"
                ReferencedContainer = "container:Vowels.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E0A429AD1C1A453A00040344"
-            BuildableName = "Vowels.app"
+            BuildableName = "Vowel Blocks.app"
             BlueprintName = "Vowels"
             ReferencedContainer = "container:Vowels.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E0A429AD1C1A453A00040344"
-            BuildableName = "Vowels.app"
+            BuildableName = "Vowel Blocks.app"
             BlueprintName = "Vowels"
             ReferencedContainer = "container:Vowels.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E0A429AD1C1A453A00040344"
-            BuildableName = "Vowels.app"
+            BuildableName = "Vowel Blocks.app"
             BlueprintName = "Vowels"
             ReferencedContainer = "container:Vowels.xcodeproj">
          </BuildableReference>

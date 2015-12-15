@@ -5,7 +5,7 @@
 #import "GameController.h"
 #import "config.h"
 #import "TileView.h"
-#import "TargetView.h"
+#import "SlotView.h"
 
 @implementation GameController
 {
@@ -68,7 +68,7 @@
         if ([self.dict isVowel: letter]) {
             letter = @" ";
         }
-        TargetView* target = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
+        SlotView* target = [[SlotView alloc] initWithLetter:letter andSideLength:tileSide];
         target.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/3);
         
         [self.gameView addSubview:target];
@@ -99,7 +99,7 @@
     //create tiles and tilesBottoms
     for (int i=0;i<[vowels length];i++) {
         NSString* letter = [vowels substringWithRange:NSMakeRange(i, 1)];
-        TargetView* bottom = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
+        SlotView* bottom = [[SlotView alloc] initWithLetter:letter andSideLength:tileSide];
         bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/2);
         [self.gameView addSubview:bottom];
         bottom.alpha = 0;
@@ -124,9 +124,9 @@
 //handler for after dragging a tile.
 -(void)tileView:(TileView*)tileView didDragToPoint:(CGPoint)pt
 {
-    TargetView* targetView = nil;
+    SlotView* targetView = nil;
     
-    for (TargetView* tv in _targets) {
+    for (SlotView* tv in _targets) {
         if (CGRectContainsPoint(tv.frame, pt) && [tv.letter isEqualToString:@" "]) {
             targetView = tv;
             break;
@@ -155,7 +155,7 @@
     }
 }
 
--(void)placeTile:(TileView*)tileView atTarget:(TargetView*)targetView
+-(void)placeTile:(TileView*)tileView atTarget:(SlotView*)targetView
 {
     targetView.isMatched = YES;
     tileView.isMatched = YES;
@@ -187,7 +187,7 @@
 
 -(void)checkForSuccess
 {
-    for (TargetView* t in _targets) {
+    for (SlotView* t in _targets) {
         //no success, bail out
         if (t.isMatched==NO) return;
     }
@@ -215,7 +215,7 @@
 -(NSString*) getCurrentGuess
 {
     NSString *result = @"";
-    for (TargetView* t in _targets) {
+    for (SlotView* t in _targets) {
         result = [result stringByAppendingString:t.guess];
     }
     return result;
@@ -223,7 +223,7 @@
 
 -(void) printGuessStatus
 {
-    for (TargetView* t in _targets) {
+    for (SlotView* t in _targets) {
         NSString *flag = t.isMatched ? @"Yes" : @"No";
         NSLog(@"%@: %@", t.guess, flag);
     }
@@ -395,8 +395,8 @@
 -(void)actionRevertVowel: (TileView*)tile
 {
     // find the first target, not matched yet
-    TargetView* target = nil;
-    for (TargetView* t in _tilesBottom) {
+    SlotView* target = nil;
+    for (SlotView* t in _tilesBottom) {
         if ([t.letter isEqualToString:tile.letter]) {
             target = t;
             break;
@@ -425,8 +425,8 @@
     for (TileView* tile in _tiles) {
         if (tile.isMatched) {
             // find the first target, not matched yet
-            TargetView* target = nil;
-            for (TargetView* t in _tilesBottom) {
+            SlotView* target = nil;
+            for (SlotView* t in _tilesBottom) {
                 if ([t.letter isEqualToString:tile.letter]) {
                     target = t;
                     break;
@@ -457,8 +457,8 @@
 
 -(void) generateLetterTile: (NSString*) letter {
     // find the corresponding first letter bottom
-    TargetView* target = nil;
-    for (TargetView* t in _tilesBottom) {
+    SlotView* target = nil;
+    for (SlotView* t in _tilesBottom) {
         if ([t.letter isEqualToString:letter]) {
             target = t;
             break;
@@ -481,7 +481,7 @@
 }
 
 -(void) setTargetTilesToUnmatched {
-    for (TargetView* t in _targets) {
+    for (SlotView* t in _targets) {
         if ([t.letter isEqualToString:@" "]) {
             t.guess = @" ";
             t.isMatched = NO;

@@ -4,7 +4,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TargetView : UIImageView
+@interface SlotView : UIImageView
 
 @property (strong, nonatomic, readonly) NSString* letter;
 @property (strong, nonatomic) NSString* guess;

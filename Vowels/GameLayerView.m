@@ -8,7 +8,7 @@
 
 #import "GameLayerView.h"
 #import "TileView.h"
-#import "TargetView.h"
+#import "SlotView.h"
 
 @implementation GameLayerView
 
@@ -26,7 +26,7 @@
     // let touches through and only catch the ones on buttons
     UIView* hitView = (UIView*)[super hitTest:point withEvent:event];
     
-    if ([hitView isKindOfClass:[TileView class]] || [hitView isKindOfClass:[TargetView class]] ||
+    if ([hitView isKindOfClass:[TileView class]] || [hitView isKindOfClass:[SlotView class]] ||
         [hitView isKindOfClass:[UIButton class]]
         ) {
         return hitView;

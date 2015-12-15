@@ -34,7 +34,7 @@
 		E007F3841C209CCD00F5F1CC /* clickSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E007F3831C209CCD00F5F1CC /* clickSound.wav */; };
 		E09595C11C1A6CB6009022EF /* StopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595BF1C1A6CB6009022EF /* StopwatchView.m */; };
 		E09595C41C1A6CC2009022EF /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C31C1A6CC2009022EF /* TileView.m */; };
-		E09595C71C1A6CE9009022EF /* TargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C61C1A6CE9009022EF /* TargetView.m */; };
+		E09595C71C1A6CE9009022EF /* SlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C61C1A6CE9009022EF /* SlotView.m */; };
 		E09595CA1C1A6CF7009022EF /* HUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595C91C1A6CF7009022EF /* HUDView.m */; };
 		E09595D01C1A6D2D009022EF /* CounterLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595CF1C1A6D2D009022EF /* CounterLabelView.m */; };
 		E09595D61C1A6D65009022EF /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = E09595D51C1A6D65009022EF /* GameData.m */; };
@@ -107,8 +107,8 @@
 		E09595BF1C1A6CB6009022EF /* StopwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopwatchView.m; sourceTree = "<group>"; };
 		E09595C21C1A6CC2009022EF /* TileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileView.h; sourceTree = "<group>"; };
 		E09595C31C1A6CC2009022EF /* TileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileView.m; sourceTree = "<group>"; };
-		E09595C51C1A6CE9009022EF /* TargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetView.h; sourceTree = "<group>"; };
-		E09595C61C1A6CE9009022EF /* TargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetView.m; sourceTree = "<group>"; };
+		E09595C51C1A6CE9009022EF /* SlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlotView.h; sourceTree = "<group>"; };
+		E09595C61C1A6CE9009022EF /* SlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotView.m; sourceTree = "<group>"; };
 		E09595C81C1A6CF7009022EF /* HUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDView.h; sourceTree = "<group>"; };
 		E09595C91C1A6CF7009022EF /* HUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDView.m; sourceTree = "<group>"; };
 		E09595CE1C1A6D2D009022EF /* CounterLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterLabelView.h; sourceTree = "<group>"; };
@@ -311,8 +311,8 @@
 			children = (
 				E09595C21C1A6CC2009022EF /* TileView.h */,
 				E09595C31C1A6CC2009022EF /* TileView.m */,
-				E09595C51C1A6CE9009022EF /* TargetView.h */,
-				E09595C61C1A6CE9009022EF /* TargetView.m */,
+				E09595C51C1A6CE9009022EF /* SlotView.h */,
+				E09595C61C1A6CE9009022EF /* SlotView.m */,
 				E09595BE1C1A6CB6009022EF /* StopwatchView.h */,
 				E09595BF1C1A6CB6009022EF /* StopwatchView.m */,
 				E007F3801C1F6B6700F5F1CC /* CountDownView.h */,
@@ -505,7 +505,7 @@
 				E007F3821C1F6B6700F5F1CC /* CountDownView.m in Sources */,
 				E0D149071C1D0C5F0039D713 /* GameLayerView.m in Sources */,
 				E09595DB1C1A6D82009022EF /* GameController.m in Sources */,
-				E09595C71C1A6CE9009022EF /* TargetView.m in Sources */,
+				E09595C71C1A6CE9009022EF /* SlotView.m in Sources */,
 				E09595D81C1A6D7B009022EF /* AudioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
