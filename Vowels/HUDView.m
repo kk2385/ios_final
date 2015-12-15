@@ -163,26 +163,33 @@
 
 -(void) makeAllHudElementsInvisible {
     
-    self.logo.alpha = 0;
-    self.btnStart.alpha = 0;
-    self.btnHelp.alpha = 0;
-    self.btnReset.alpha = 0;
-    self.highScoreLabel.alpha = 0;
-    self.highScorePoints.alpha = 0;
-    self.gameOverLabel.alpha = 0;
-    self.stopwatch.alpha = 0;
-    self.countdown.alpha = 0;
-    self.gamePoints.alpha = 0;
-    self.pointsLabel.alpha = 0;
-    self.helpTextLabel.alpha = 0;
-    
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.logo.alpha = 0;
+                         self.btnStart.alpha = 0;
+                         self.btnHelp.alpha = 0;
+                         self.btnReset.alpha = 0;
+                         self.highScoreLabel.alpha = 0;
+                         self.highScorePoints.alpha = 0;
+                         self.gameOverLabel.alpha = 0;
+                         self.stopwatch.alpha = 0;
+                         self.countdown.alpha = 0;
+                         self.gamePoints.alpha = 0;
+                         self.pointsLabel.alpha = 0;
+                         self.helpTextLabel.alpha = 0;
+                     } completion:^(BOOL finished) {
+                     }];
 }
 
 -(void) inGameMode {
     [self makeAllHudElementsInvisible];
-    [UIView animateWithDuration:0.2
+    self.gamePoints.center = CGPointMake(self.center.x+kScreenWidth/3.5+10, self.center.y+kScreenHeight/3.3);
+    self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y+kScreenHeight/3.3);
+    [UIView animateWithDuration:0.1
                           delay:0
-                        options:UIViewAnimationOptionCurveEaseOut
+                        options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          self.btnHelp.alpha = 1;
                          self.btnReset.alpha = 1;
@@ -190,7 +197,9 @@
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.gamePoints.alpha = 1;
+                         self.gamePoints.center = CGPointMake(self.center.x+kScreenWidth/3.5+10, self.center.y+kScreenHeight/3.3);
                          self.pointsLabel.alpha = 1;
+                         self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y+kScreenHeight/3.3);
                      } completion:^(BOOL finished) {
                      }];
      self.backgroundColor = [UIColor clearColor];
@@ -200,7 +209,7 @@
 -(void) inCountDownMode {
     [self makeAllHudElementsInvisible];
     
-    [UIView animateWithDuration:0.1
+    [UIView animateWithDuration:0.8
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
@@ -234,19 +243,18 @@
 -(void) inEndGameMode {
     [self makeAllHudElementsInvisible];
     self.highScorePoints.text = [NSString stringWithFormat:@"%d", MAX(self.gamePoints.value, [self.highScorePoints.text integerValue])];
-    [UIView animateWithDuration:0.2
+    [UIView animateWithDuration:1
                           delay:0
-                        options:UIViewAnimationOptionCurveEaseOut
+                        options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.btnStart.alpha = 1;
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.gameOverLabel.alpha = 1;
                          self.gamePoints.alpha = 1;
+                         self.gamePoints.center = CGPointMake(self.center.x+10+kScreenWidth/3.5, self.center.y);
                          self.pointsLabel.alpha = 1;
-                        
-                         
-                         
+                         self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y);
                      } completion:^(BOOL finished) {
                          
                      }];
