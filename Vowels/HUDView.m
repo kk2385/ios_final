@@ -24,6 +24,12 @@
     hud.btnStart.center = CGPointMake(hud.center.x, hud.center.y-kScreenHeight/5);
     [hud addSubview: hud.logo];
     
+    UIImage* gameOverLogoImage = [UIImage imageNamed: @"overGame"];
+    hud.gameOverLogo = [[UIImageView alloc] initWithImage: gameOverLogoImage];
+    hud.gameOverLogo.frame = CGRectMake(kScreenWidth/6, kScreenHeight/8, 440*2/3, 244*2/3);
+    hud.gameOverLogo.center = CGPointMake(hud.center.x, hud.center.y-kScreenHeight/5);
+    [hud addSubview: hud.gameOverLogo];
+    
     //the stopwatch
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];
     hud.stopwatch.seconds = 0;
@@ -163,6 +169,7 @@
 -(void) makeAllHudElementsVisible {
 
     self.logo.alpha = 1;
+    self.gameOverLogo.alpha = 1;
     self.btnStart.alpha = 0.8;
     self.btnHelp.alpha = 0.8;
     self.btnReset.alpha = 0.8;
@@ -184,6 +191,7 @@
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.logo.alpha = 0;
+                         self.gameOverLogo.alpha = 0;
                          self.btnStart.alpha = 0;
                          self.btnHelp.alpha = 0;
                          self.btnReset.alpha = 0;
@@ -262,11 +270,12 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
+                         self.gameOverLogo.alpha = 1;
                          self.btnStart.alpha = 0.8;
                          self.btnMenu.alpha = 0.8;
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
-                         self.gameOverLabel.alpha = 1;
+//                         self.gameOverLabel.alpha = 1;
                          self.gamePoints.alpha = 1;
                          self.gamePoints.center = CGPointMake(self.center.x+10+kScreenWidth/3.5, self.center.y);
                          self.pointsLabel.alpha = 1;

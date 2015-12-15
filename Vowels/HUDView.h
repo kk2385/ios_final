@@ -15,6 +15,7 @@
 @interface HUDView : UIView
 
 @property (strong, nonatomic) UIImageView* logo;
+@property (strong, nonatomic) UIImageView* gameOverLogo;
 @property (strong, nonatomic) StopwatchView* stopwatch;
 @property (strong, nonatomic) CountDownView* countdown;
 @property (strong, nonatomic) CounterLabelView* gamePoints;
