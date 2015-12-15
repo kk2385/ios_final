@@ -6,37 +6,6 @@
 
 @implementation SlotView
 
-- (id)init
-{
-    NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-    return nil;
-}
-
-- (id)initWithImage:(UIImage *)image
-{
-    NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-    return nil;
-}
-
-- (id)initWithImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage
-{
-    NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-    return nil;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-    return nil;
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-    NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-    return nil;
-}
-
-//create a new target, store what letter should it match to
 -(instancetype)initWithLetter:(NSString*)letter andSideLength:(float)sideLength
 {
     UIImage* img = [UIImage imageNamed:@"constonant"];

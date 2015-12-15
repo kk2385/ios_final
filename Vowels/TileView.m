@@ -12,36 +12,6 @@
   CGAffineTransform _tempTransform;
 }
 
-- (id)init
-{
-  NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-  return nil;
-}
-
-- (id)initWithImage:(UIImage *)image
-{
-  NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-  return nil;
-}
-
-- (id)initWithImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage
-{
-  NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-  return nil;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-  NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-  return nil;
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-  NSAssert(NO, @"Use initWithLetter:andSideLength instead");
-  return nil;
-}
-
 // create new tile for a given letter
 -(instancetype)initWithLetter:(NSString*)letter andSideLength:(float)sideLength
 {
