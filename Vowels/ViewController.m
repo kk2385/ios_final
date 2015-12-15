@@ -53,11 +53,10 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if(event.type == UIEventSubtypeMotionShake)
-    {
+    if(event.type == UIEventSubtypeMotionShake) {
         NSLog(@"shake gesture!");
         if ([self.controller inGame]) {
-            NSLog(@"in game!");
+            NSLog(@"in game!- resetting all blocks!");
             [self.controller actionReset];
         }
     }
