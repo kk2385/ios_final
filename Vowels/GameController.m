@@ -15,7 +15,6 @@
     NSMutableArray* _targets;
     
     //stopwatch variables
-    int _secondsLeft;
     NSTimer* _timer;
     
     
@@ -499,4 +498,9 @@
         [view removeFromSuperview];
     }
 }
+
+-(BOOL) inGame {
+    return _secondsLeft > 0;
+}
+
 @end
