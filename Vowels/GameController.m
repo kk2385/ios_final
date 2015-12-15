@@ -286,11 +286,7 @@
 {
     //initialize the timer HUD
     _countDownSecondsLeft = 3;
-
-
     [self.hud.countdown setSeconds:_countDownSecondsLeft];
-    
-   
     
     //schedule a new timer
     _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -298,8 +294,6 @@
                                             selector:@selector(tickCountDown:)
                                             userInfo:nil
                                              repeats:YES];
-    
-
 }
 
 //stop the watch
@@ -352,6 +346,7 @@
 
 -(void) actionMenu {
     [_hud inMenuMode];
+    [self.audioController playEffect: clickSound];
 }
 
 
@@ -390,8 +385,6 @@
     [self clearBoard];
     [self showRandomWord];
     [self.audioController playEffect: clickSound];
-
-    
 }
 
 

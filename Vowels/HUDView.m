@@ -27,7 +27,12 @@
     [hud addSubview: hud.gameOverLogo];
     
     //the stopwatch
-    hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 300, 100)];
+    hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 150, 50)];
+    hud.stopwatch.textAlignment = NSTextAlignmentCenter;
+    hud.stopwatch.center = CGPointMake(hud.center.x, kScreenHeight/5);
+    hud.stopwatch.backgroundColor = [UIColor colorWithRed:0.18 green:0.58 blue:0.79 alpha:1.0];
+    hud.stopwatch.layer.masksToBounds = YES;
+    hud.stopwatch.layer.cornerRadius = 8;
     hud.stopwatch.seconds = 0;
     [hud addSubview: hud.stopwatch];
     
@@ -67,6 +72,8 @@
     hud.highScoreLabel.backgroundColor = [UIColor colorWithRed:0.18 green:0.58 blue:0.79 alpha:1.0];
     hud.highScoreLabel.layer.masksToBounds = YES;
     hud.highScoreLabel.layer.cornerRadius = 8;
+    hud.highScoreLabel.layer.borderColor = [UIColor whiteColor].CGColor;
+    hud.highScoreLabel.layer.borderWidth = 2.0f;
     
     hud.highScoreLabel.font = kFontHUD;
     hud.highScoreLabel.text = @" High Score:";
