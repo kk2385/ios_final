@@ -23,7 +23,7 @@
         self.font = countDownFont;
         self.textColor = [UIColor blackColor];
         self.layer.borderColor = [UIColor blackColor].CGColor;
-        self.layer.borderWidth = 2.0f;
+        self.layer.borderWidth = 5.0f;
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = 8;
         
