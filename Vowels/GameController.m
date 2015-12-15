@@ -76,7 +76,7 @@
             letter = @" ";
         }
         TargetView* target = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
-        target.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/4);
+        target.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/3);
         
         [self.gameView addSubview:target];
         target.alpha = 0;
@@ -107,7 +107,7 @@
     for (int i=0;i<[vowels length];i++) {
         NSString* letter = [vowels substringWithRange:NSMakeRange(i, 1)];
         TargetView* bottom = [[TargetView alloc] initWithLetter:letter andSideLength:tileSide];
-        bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), 350);
+        bottom.center = CGPointMake(xOffset + i*(tileSide + kTileMargin), kScreenHeight/2);
         [self.gameView addSubview:bottom];
         bottom.alpha = 0;
         [UIView animateWithDuration:0.5
@@ -362,8 +362,9 @@
     }
     _countDownSecondsLeft --;
     [self.hud.countdown setSeconds:_countDownSecondsLeft];
-    
+
     if (_countDownSecondsLeft==0) {
+        self.hud.countdown.text = @"";
         [self stopCountDownStopwatch];
     }
 }

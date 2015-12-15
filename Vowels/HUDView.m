@@ -101,6 +101,7 @@
     
     [hud.btnHelp setBackgroundImage:image forState:UIControlStateNormal];
     hud.btnHelp.frame = CGRectMake(20, 500, 80, 40);
+    hud.btnHelp.center = CGPointMake(kScreenWidth*2/3, hud.center.y+kScreenHeight/3.3);
     hud.btnHelp.alpha = 0.8;
     [hud addSubview: hud.btnHelp];
     
@@ -122,6 +123,7 @@
     
     [hud.btnReset setBackgroundImage:image forState:UIControlStateNormal];
     hud.btnReset.frame = CGRectMake(160, 500, 145,40);
+    hud.btnReset.center = CGPointMake(kScreenWidth/3, hud.center.y+kScreenHeight/3.3);
     hud.btnReset.alpha = 0.8;
     [hud addSubview: hud.btnReset];
     
@@ -185,8 +187,8 @@
 
 -(void) inGameMode {
     [self makeAllHudElementsInvisible];
-    self.gamePoints.center = CGPointMake(self.center.x+kScreenWidth/3.5+10, self.center.y+kScreenHeight/3.3);
-    self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y+kScreenHeight/3.3);
+    self.gamePoints.center = CGPointMake(self.center.x+kScreenWidth/3.5+10, self.center.y+kScreenHeight/6);
+    self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y+kScreenHeight/6);
     [UIView animateWithDuration:0.1
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
@@ -197,9 +199,7 @@
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
                          self.gamePoints.alpha = 1;
-                         self.gamePoints.center = CGPointMake(self.center.x+kScreenWidth/3.5+10, self.center.y+kScreenHeight/3.3);
                          self.pointsLabel.alpha = 1;
-                         self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y+kScreenHeight/3.3);
                      } completion:^(BOOL finished) {
                      }];
      self.backgroundColor = [UIColor clearColor];

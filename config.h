@@ -17,7 +17,7 @@
 #define kFontHUD [UIFont fontWithName:@"Avenir" size:18]
 #define kFontHUDBig [UIFont fontWithName:@"Avenir" size:40]
 #define timerFont [UIFont fontWithName:@"Noteworthy-Bold" size:30]
-#define countDownFont [UIFont fontWithName:@"Avenir" size:125]
+#define countDownFont [UIFont fontWithName:@"Avenir" size:100]
 //audio defines
 #define dragTileSound  @"plop.mp3"
 #define incorrectSound @"badL.wav"
