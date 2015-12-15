@@ -345,8 +345,11 @@
 }
 
 -(void) actionMenu {
-    [_hud inMenuMode];
     [self.audioController playEffect: clickSound];
+    [_timer invalidate];
+    _timer = nil;
+    [self clearBoard];
+    [_hud inMenuMode];
 }
 
 

@@ -30,9 +30,6 @@
     hud.stopwatch = [[StopwatchView alloc] initWithFrame: CGRectMake(kScreenWidth/2-150, 0, 150, 50)];
     hud.stopwatch.textAlignment = NSTextAlignmentCenter;
     hud.stopwatch.center = CGPointMake(hud.center.x, kScreenHeight/5);
-    hud.stopwatch.backgroundColor = [UIColor colorWithRed:0.18 green:0.58 blue:0.79 alpha:1.0];
-    hud.stopwatch.layer.masksToBounds = YES;
-    hud.stopwatch.layer.cornerRadius = 8;
     hud.stopwatch.seconds = 0;
     [hud addSubview: hud.stopwatch];
     
@@ -215,12 +212,16 @@
     [self makeAllHudElementsInvisible];
     self.gamePoints.center = CGPointMake(self.center.x+kScreenWidth/3.5+10, self.center.y+kScreenHeight/6);
     self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y+kScreenHeight/6);
+    float scale = 1.0f/2;
+    self.btnMenu.transform = CGAffineTransformScale(self.btnMenu.transform, scale, scale);
+    self.btnMenu.center = CGPointMake(kScreenWidth-self.btnMenu.frame.size.width/2-30, self.btnMenu.frame.size.height/2+30);
     [UIView animateWithDuration:0.1
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          self.btnHelp.alpha = 0.8;
                          self.btnReset.alpha = 0.8;
+                         self.btnMenu.alpha = 0.8;
                          self.stopwatch.alpha = 1;
                          self.highScorePoints.alpha = 1;
                          self.highScoreLabel.alpha = 1;
@@ -253,6 +254,7 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
+                         self.btnMenu.transform = CGAffineTransformIdentity;
                          self.logo.alpha = 1;
                          self.btnStart.alpha = 1;
                          self.highScoreLabel.alpha = 1;
@@ -273,6 +275,7 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
+                         self.btnMenu.transform = CGAffineTransformIdentity;
                          self.gameOverLogo.alpha = 1;
                          self.btnStart.alpha = 0.8;
                          self.btnMenu.alpha = 0.8;
@@ -283,6 +286,7 @@
                          self.gamePoints.center = CGPointMake(self.center.x+10+kScreenWidth/3.5, self.center.y);
                          self.pointsLabel.alpha = 1;
                          self.pointsLabel.center = CGPointMake(self.center.x+10, self.center.y);
+                         self.btnMenu.center = CGPointMake(self.center.x, self.center.y+kScreenHeight/7.5 + 60);
                      } completion:^(BOOL finished) {
                          
                      }];
