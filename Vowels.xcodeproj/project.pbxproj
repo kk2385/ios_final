@@ -124,7 +124,7 @@
 		E09595D71C1A6D7B009022EF /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		E09595D91C1A6D82009022EF /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		E09595DA1C1A6D82009022EF /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
-		E0A429AE1C1A453A00040344 /* Vowels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vowels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A429AE1C1A453A00040344 /* Vowel Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vowel Blocks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A429B21C1A453A00040344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0A429B41C1A453A00040344 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E0A429B51C1A453A00040344 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		E0A429AF1C1A453A00040344 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E0A429AE1C1A453A00040344 /* Vowels.app */,
+				E0A429AE1C1A453A00040344 /* Vowel Blocks.app */,
 				E0A429C71C1A453B00040344 /* VowelsTests.xctest */,
 				E0A429D21C1A453B00040344 /* VowelsUITests.xctest */,
 			);
@@ -385,7 +385,7 @@
 			);
 			name = Vowels;
 			productName = Vowels;
-			productReference = E0A429AE1C1A453A00040344 /* Vowels.app */;
+			productReference = E0A429AE1C1A453A00040344 /* Vowel Blocks.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E0A429C61C1A453B00040344 /* VowelsTests */ = {
@@ -632,6 +632,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Vowel Blocks";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -668,6 +669,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Vowel Blocks";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -680,7 +682,7 @@
 				INFOPLIST_FILE = Vowels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = af.Vowels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vowel Blocks";
 			};
 			name = Debug;
 		};
@@ -691,7 +693,7 @@
 				INFOPLIST_FILE = Vowels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = af.Vowels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vowel Blocks";
 			};
 			name = Release;
 		};

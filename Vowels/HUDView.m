@@ -17,7 +17,7 @@
     UIImage* logoImage = [UIImage imageNamed: @"logoSmall.png"];
     hud.logo = [[UIImageView alloc] initWithImage: logoImage];
     hud.logo.frame = CGRectMake(kScreenWidth/6, kScreenHeight/8, 230, 230);
-    hud.btnStart.center = CGPointMake(hud.center.x, hud.center.y-kScreenHeight/5);
+    hud.logo.center = CGPointMake(hud.center.x, hud.center.y-kScreenHeight/4.7);
     [hud addSubview: hud.logo];
     
     UIImage* gameOverLogoImage = [UIImage imageNamed: @"overGame"];
@@ -46,23 +46,25 @@
     hud.pointsLabel.textColor = [UIColor colorWithRed:0.46 green:0.46 blue:0.46 alpha:1.0];
     [hud addSubview:hud.pointsLabel];
     
-
-    
     //game over label
     hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,-10,400,400)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
     hud.gameOverLabel.font = [UIFont fontWithName:@"GurmukhiMN" size:50];
     hud.gameOverLabel.textColor = [UIColor blackColor];
     hud.gameOverLabel.text = @"Game Over!";
-    
-//    
-//    UIGraphicsBeginImageContext(hud.gameOverLabel.frame.size);
-//    [[UIImage imageNamed:@"jgo.png"] drawInRect:hud.gameOverLabel.bounds];
-//    UIImage *images = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    
-//    hud.gameOverLabel.backgroundColor = [UIColor colorWithPatternImage:images];
     [hud addSubview:hud.gameOverLabel];
+    
+    
+    
+    //title label
+    hud.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,-10,200,200)];
+    hud.titleLabel.backgroundColor = [UIColor clearColor];
+    hud.titleLabel.font = [UIFont fontWithName:@"Avenir" size:30];
+    hud.titleLabel.textColor = [UIColor blackColor];
+    hud.titleLabel.textAlignment = NSTextAlignmentCenter;
+    hud.titleLabel.center = CGPointMake(hud.center.x, kScreenHeight/2+20);
+    hud.titleLabel.text = @"Vowel Blocks";
+    [hud addSubview:hud.titleLabel];
     
     //high score label
     hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 25,117,30)];
@@ -190,6 +192,7 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
+                         self.titleLabel.alpha = 0;
                          self.logo.alpha = 0;
                          self.gameOverLogo.alpha = 0;
                          self.btnStart.alpha = 0;
@@ -255,6 +258,7 @@
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.btnMenu.transform = CGAffineTransformIdentity;
+                         self.titleLabel.alpha = 1;
                          self.logo.alpha = 1;
                          self.btnStart.alpha = 1;
                          self.highScoreLabel.alpha = 1;
