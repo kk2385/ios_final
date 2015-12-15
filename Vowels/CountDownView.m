@@ -20,7 +20,7 @@
         
         self.backgroundColor = [UIColor clearColor];
         self.font = timerFont;
-        self.textColor = [UIColor whiteColor];
+        self.textColor = [UIColor blackColor  ];
         
     }
     return self;

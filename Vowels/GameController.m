@@ -330,7 +330,11 @@
 {
     //initialize the timer HUD
     _countDownSecondsLeft = 3;
+
+
     [self.hud.countdown setSeconds:_countDownSecondsLeft];
+    
+   
     
     //schedule a new timer
     _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -338,6 +342,8 @@
                                             selector:@selector(tickCountDown:)
                                             userInfo:nil
                                              repeats:YES];
+    
+
 }
 
 //stop the watch
@@ -351,6 +357,9 @@
 //stopwatch on tick
 -(void)tickCountDown:(NSTimer*)timer
 {
+    if (_countDownSecondsLeft > 0) {
+        [self.audioController playEffect: timerEnding];
+    }
     _countDownSecondsLeft --;
     [self.hud.countdown setSeconds:_countDownSecondsLeft];
     

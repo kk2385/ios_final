@@ -26,7 +26,7 @@
     [hud addSubview: hud.stopwatch];
     
     //the countdown
-    hud.countdown = [[CountDownView alloc] initWithFrame: CGRectMake(kScreenWidth/2, kScreenHeight/2, 300, 100)];
+    hud.countdown = [[CountDownView alloc] initWithFrame: CGRectMake(kScreenWidth/2, kScreenHeight/2, 100, 100)];
     hud.countdown.seconds = 3;
     [hud addSubview: hud.countdown];
     
@@ -41,12 +41,19 @@
 
     
     //game over label
-    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,400,400)];
+    hud.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,-10,400,400)];
     hud.gameOverLabel.backgroundColor = [UIColor clearColor];
-    hud.gameOverLabel.font = [UIFont fontWithName:@"GurmukhiMN " size:40];
+    hud.gameOverLabel.font = [UIFont fontWithName:@"GurmukhiMN" size:50];
     hud.gameOverLabel.textColor = [UIColor blackColor];
-    //hud.gameOverLabel.text = @"Game Over!";
-    hud.gameOverLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"GOVER.png"]];
+    hud.gameOverLabel.text = @"Game Over!";
+    
+//    
+//    UIGraphicsBeginImageContext(hud.gameOverLabel.frame.size);
+//    [[UIImage imageNamed:@"jgo.png"] drawInRect:hud.gameOverLabel.bounds];
+//    UIImage *images = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    hud.gameOverLabel.backgroundColor = [UIColor colorWithPatternImage:images];
     [hud addSubview:hud.gameOverLabel];
     
     //high score label
@@ -115,14 +122,14 @@
     
     
     //help text label
-    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/5, kScreenHeight/2-40,200,400)];
+    hud.helpTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth/5, kScreenHeight/2-40,240,400)];
     hud.helpTextLabel.backgroundColor = [UIColor clearColor];
-    hud.helpTextLabel.font = kFontHUD;
+    hud.helpTextLabel.font = [UIFont fontWithName:@"Noteworthy-Bold" size:16];
     hud.helpTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
     hud.helpTextLabel.numberOfLines = 0;
     hud.helpTextLabel.text = @"Drag vowels to blank slots to complete the missing word";
-    hud.helpTextLabel.textColor = [UIColor blueColor];
-    hud.helpTextLabel.shadowColor = [UIColor blackColor];
+    hud.helpTextLabel.textColor = [UIColor blackColor];
+   // hud.helpTextLabel.shadowColor = [UIColor blackColor];
     hud.helpTextLabel.shadowOffset = CGSizeMake(0, -1.0);
     [hud addSubview:hud.helpTextLabel];
     
@@ -192,7 +199,7 @@
                      } completion:^(BOOL finished) {
                          
                      }];
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mmj.jpg"]];
 }
 
 -(void) inMenuMode {
@@ -209,7 +216,7 @@
                      } completion:^(BOOL finished) {
                          
                      }];
-   self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
+   self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mmj.jpg"]];
     
 
 }
@@ -235,8 +242,8 @@
                      }];
    
     //set the menu screen display image
-     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menub"]];
-    //self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gameOver"]];
+     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"strscreen.jpg"]];
+   
 }
 
 
