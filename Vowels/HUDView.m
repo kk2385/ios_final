@@ -67,7 +67,7 @@
     [hud addSubview:hud.titleLabel];
     
     //high score label
-    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 25,117,30)];
+    hud.highScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 25,130,30)];
     hud.highScoreLabel.backgroundColor = [UIColor colorWithRed:0.18 green:0.58 blue:0.79 alpha:1.0];
     hud.highScoreLabel.layer.masksToBounds = YES;
     hud.highScoreLabel.layer.cornerRadius = 8;
